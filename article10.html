@@ -1,86 +1,988 @@
-# 👋 Hi there, I'm Mr. AK (Ameshwar Dewangan)! 🚀
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p align="center">
-  <img src="passionate-banner.png" alt="Journey of Life Banner" width="100%" />
+<title>Mr. AK | Full Stack Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d1117;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00ff99;
+border-radius:20px;
+}
+
+/* Header */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#00ff99;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ff99;
+}
+
+/* Hero Section */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:100px 8%;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('passionate-banner.png');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:70px;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.hero-content span{
+color:#00ff99;
+}
+
+.hero-content p{
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#00ff99;
+color:black;
+font-weight:700;
+text-decoration:none;
+border-radius:40px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px #00ff99;
+}
+
+/* Section */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:60px;
+color:#00ff99;
+}
+
+/* About */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about-text h3{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.about-text p{
+line-height:1.9;
+color:#ccc;
+margin-bottom:15px;
+}
+
+/* Skills */
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-box{
+background:#161b22;
+padding:30px;
+border-radius:20px;
+transition:.4s;
+border:1px solid #222;
+}
+
+.skill-box:hover{
+transform:translateY(-10px);
+border-color:#00ff99;
+box-shadow:0 0 20px rgba(0,255,153,.3);
+}
+
+.skill-box h3{
+margin-bottom:15px;
+color:#00ff99;
+}
+
+.skill-box p{
+color:#ccc;
+line-height:1.8;
+}
+
+/* Progress */
+
+.progress{
+margin-top:15px;
+height:10px;
+background:#333;
+border-radius:50px;
+overflow:hidden;
+}
+
+.progress span{
+display:block;
+height:100%;
+background:#00ff99;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:45px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+Mr. AK
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Hello, I'm <span>Mr. AK</span>
+</h1>
+
+<p>
+
+Full Stack Developer, Content Creator,
+Tech Enthusiast and Founder of Journey of Life.
+
+Building modern digital experiences through
+clean code, creativity and innovation.
+
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=1000&color=39FF14&center=true&vCenter=true&width=600&lines=Full+Stack+Software+Engineer;Content+Creator+%40Journey+of+Life;Open+Source+Architect;Tech+Vlogger+%26+Storyteller" alt="Typing SVG" />
+<a href="#about" class="btn">
+Explore My Journey
+</a>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about">
+
+<img src="profile.jpg" alt="Profile">
+
+<div class="about-text">
+
+<h3>
+Ameshwar Dewangan
+</h3>
+
+<p>
+
+I am a passionate Full Stack Developer who loves
+building powerful web applications and sharing
+knowledge through my platform Journey of Life.
+
 </p>
 
----
+<p>
 
-## 📖 Executive Summary & Mission Statement
+My mission is to combine technology,
+creativity and innovation to build solutions
+that positively impact people's lives.
 
-Welcome to my digital headquarters! I am **Mr. AK**, a multi-disciplinary **Full-Stack Software Engineer** and the creative mind behind **Journey of Life**. My philosophy revolves around bridging the gap between clean code and human experiences. I don't just compile files; I architect solutions that make a tangible difference in everyday workflows.
+</p>
 
-Through my open-source contributions and my content platform, I document the raw, unfiltered process of building modern web ecosystems. Whether it's optimization of backend transactional queries or designing high-retention user interfaces, I approach every challenge with systemic analysis and an iterative mindset.
+<p>
 
----
+From frontend interfaces to backend systems,
+I continuously explore new technologies
+and strive to improve every day.
 
-## 📝 Detailed Biography: The Fusion of Logic & Creativity
+</p>
 
-My journey into software development wasn't just about learning syntax; it was driven by a deep curiosity about how systems interact at scale. From managing local database instances to designing complete user journeys, I have realized that great engineering requires both empathy for the user and strict adherence to architectural patterns.
+</div>
 
-### 🌐 The Coding Paradigm
-In development, I look past frameworks. While tools change, core fundamentals—such as memory management, algorithm optimization, network protocols, and clean separation of concerns—remain constant. My coding methodology is heavily grounded in the **SOLID principles**, modular architecture, and rigorous version control tracking.
+</div>
 
-### 🎥 The Content Creation Pillar (Journey of Life)
-Engineering can be dry if kept inside a silo. That is why I started **[Journey of Life](https://ameshwardewangan-sys.github.io/mr_ak__02/)**. This channel serves as a visual and technical log where I demystify complex programming logic, discuss personal development, and share the realistic highs and lows of being a digital creator. It forces me to communicate better, teach effectively, and structure my thoughts clearly before putting them out into the tech ecosystem.
+</section>
 
----
+<!-- Skills -->
 
-## 🛠️ Comprehensive Technical Stack Ecosystem
+<section id="skills">
 
-Below is an exhaustive breakdown of my technical domain, mapped by proficiency and implementation depth.
+<h2 class="section-title">
+Technical Skills
+</h2>
 
-### 💻 Front-End Engineering & Visual UI Architecture
-I prioritize rendering efficiency, structural semantics, accessibility (a11y), and state optimization.
-*   **HTML5 & CSS3:** Semantic markup structures, advanced grid systems, layout responsiveness, CSS variables, and modern web accessibility compliance.
-*   **JavaScript (ES6+):** Deep understanding of asynchronous programming models, closures, event loops, promises, scope mechanisms, and memory execution contexts.
-*   **React.js Ecosystem:** Component composition lifecycle, hooks management, context propagation, state synchronization patterns, and dynamic rendering algorithms.
-*   **Tailwind CSS:** Utility-first responsive design implementation, atomic styling design tokens, and highly maintainable modern visual styling frameworks.
+<div class="skills-container">
 
-### ⚙️ Back-End Systems, Infrastructure & Databases
-I build secure, scalable backend services focused on low latency, request-response handling, and strong data integrity.
-*   **Node.js Runtime:** Building event-driven, non-blocking I/O microservices, handling RESTful API design protocols, and optimizing server middleware execution.
-*   **MySQL Database Systems:** Advanced relational data modeling, query optimization execution structures, indexing strategies, schema migration execution, and transaction safety management.
-*   **Git & Version Control System:** Advanced branching strategies (Gitflow), structural commit hygiene, merge conflict mitigation, and atomic tracking management.
-*   **Visual Studio Code Environment:** Customized automation tooling configurations, strict linting/formatting automation integrations, and systematic workspace productivity structures.
+<div class="skill-box">
+<h3>HTML5</h3>
+<p>Semantic structure, SEO optimization and accessibility.</p>
+<div class="progress">
+<span style="width:95%"></span>
+</div>
+</div>
 
----
+<div class="skill-box">
+<h3>CSS3</h3>
+<p>Responsive design, animations and modern layouts.</p>
+<div class="progress">
+<span style="width:90%"></span>
+</div>
+</div>
 
-## 📊 Technical Skill Grid & Mastery Mapping
+<div class="skill-box">
+<h3>JavaScript</h3>
+<p>Interactive user experiences and dynamic applications.</p>
+<div class="progress">
+<span style="width:85%"></span>
+</div>
+</div>
 
-| Layer / Tier | Technology / Concept | Implementation Proficiencies | Expertise Level |
-| :--- | :--- | :--- | :--- |
-| **User Interface** | React.js, HTML5, Tailwind | Single Page Applications, Custom Component Hooks, Responsive Rendering | Advanced |
-| **Server Engine** | Node.js, Express Architecture | API Middleware Design, REST Routing Protocols, Async Process Control | Intermediate-Advanced |
-| **Data Repository** | MySQL Relational Engine | Relational Normalization, Indexing Optimization, Structural Joins | Intermediate |
-| **DevOps & Workflows** | Git, GitHub Platform, CI Workflows | Version History Management, Collaborative Code Merges, Pull Requests | Advanced |
+<div class="skill-box">
+<h3>React JS</h3>
+<p>Reusable components and scalable UI development.</p>
+<div class="progress">
+<span style="width:80%"></span>
+</div>
+</div>
 
----
+<div class="skill-box">
+<h3>Node JS</h3>
+<p>Fast and scalable backend development.</p>
+<div class="progress">
+<span style="width:80%"></span>
+</div>
+</div>
 
-## 🚀 Deep-Dive Project Case Studies & Repositories
+<div class="skill-box">
+<h3>MySQL</h3>
+<p>Database design and optimization.</p>
+<div class="progress">
+<span style="width:75%"></span>
+</div>
+</div>
 
-### 🌟 Case Study 1: Journey of Life — Personal Digital Ecosystem
-*   **Project Nature:** Brand Architecture, Technical Documentation, Portfolio Distribution Engine.
-*   **Live Hub Deployment:** [Official Journey of Life Portal Website](https://ameshwardewangan-sys.github.io/mr_ak__02/)
-*   **Architectural Overview:** A highly responsive digital hub optimized for showcasing videos, design resources, software logs, and creative branding methodologies.
-*   **Key Challenges Met:** Ensuring dynamic responsiveness across varying devices while embedding media integrations smoothly without sacrificing initial page load speeds.
+</div>
 
-### 💻 Case Study 2: Scalable Full-Stack Application Matrix
-*   **Project Nature:** Monolithic/Microservices Web Architecture Sandbox.
-*   **Tech Stack Base:** React.js Core, Node.js Engine, MySQL Database Layer, Tailwind CSS Interface.
-*   **System Highlights:** Implemented highly optimized database operations allowing fast, concurrent processing for data retrieval, coupled with clean token-based route access controls.
+</section>
+  
+<!-- Projects Section -->
 
----
+<section id="projects">
 
-## ⚙️ Software Engineering Engineering & Content Creation Workflows
+<h2 class="section-title">
+Featured Projects
+</h2>
 
-### 🛠️ Code Architecture Philosophy
-1.  **Analyze Twice, Write Once:** Before deploying a line of code, the system architecture must be clearly conceptualized via block schemas or architectural state maps.
-2.  **Write Explicit Logic:** Readability is favored over clever, short hacks. If code requires deep comments to explain basic flows, it needs refactoring.
-3.  **Perform Atomic Version Control Changes:** Commits are broken down into precise, logical units with self-explanatory tracking notes for trace logging.
+<div class="projects-container">
 
-### 🎬 Content Creation Workflow (Journey of Life)
+<div class="project-card">
+
+<h3>
+🚀 Journey of Life
+</h3>
+
+<p>
+
+A personal brand and content creation platform
+focused on technology, motivation, self-growth
+and digital creativity.
+
+</p>
+
+<ul>
+<li>Responsive Design</li>
+<li>SEO Optimized</li>
+<li>Fast Loading Pages</li>
+<li>Mobile Friendly</li>
+<li>Modern User Interface</li>
+</ul>
+
+</div>
+
+<div class="project-card">
+
+<h3>
+💻 Full Stack Web Application
+</h3>
+
+<p>
+
+Modern web application built using React,
+Node.js and MySQL with scalable architecture.
+
+</p>
+
+<ul>
+<li>Authentication System</li>
+<li>REST APIs</li>
+<li>Database Integration</li>
+<li>Responsive Interface</li>
+<li>Performance Optimized</li>
+</ul>
+
+</div>
+
+<div class="project-card">
+
+<h3>
+🌐 Personal Portfolio
+</h3>
+
+<p>
+
+Professional portfolio website showcasing
+skills, projects, experience and achievements.
+
+</p>
+
+<ul>
+<li>Dark Premium Theme</li>
+<li>Smooth Animations</li>
+<li>Responsive Layout</li>
+<li>Professional Design</li>
+<li>Modern UI Components</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Journey Section -->
+
+<section id="journey">
+
+<h2 class="section-title">
+Journey of Life
+</h2>
+
+<div class="journey-content">
+
+<h3>
+The Story Behind The Journey
+</h3>
+
+<p>
+
+Journey of Life is not just a content platform.
+
+It represents growth, learning, persistence,
+creativity and continuous improvement.
+
+Every video, article and project reflects
+a lesson learned through experience.
+
+</p>
+
+<p>
+
+Through this platform, I share technology,
+software development, productivity,
+motivation and personal experiences
+to help others learn and grow.
+
+</p>
+
+<p>
+
+The goal is simple:
+
+To inspire people,
+share valuable knowledge
+and build a strong learning community.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Experience Section -->
+
+<section id="experience">
+
+<h2 class="section-title">
+Development Philosophy
+</h2>
+
+<div class="experience-grid">
+
+<div class="exp-box">
+<h3>🎯 Simplicity</h3>
+<p>
+Clean and maintainable code is always
+better than unnecessarily complex solutions.
+</p>
+</div>
+
+<div class="exp-box">
+<h3>⚡ Performance</h3>
+<p>
+Optimizing applications for speed,
+efficiency and user satisfaction.
+</p>
+</div>
+
+<div class="exp-box">
+<h3>📈 Growth</h3>
+<p>
+Continuous learning is essential
+for long-term success in technology.
+</p>
+</div>
+
+<div class="exp-box">
+<h3>💡 Innovation</h3>
+<p>
+Always looking for better solutions
+to solve real-world problems.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Goals Section -->
+
+<section id="goals">
+
+<h2 class="section-title">
+Future Goals
+</h2>
+
+<div class="goals-content">
+
+<div class="goal-box">
+
+<h3>
+🚀 2026 Goals
+</h3>
+
+<ul>
+<li>Master Full Stack Development</li>
+<li>Launch Professional SaaS Projects</li>
+<li>Grow Journey of Life Community</li>
+<li>Improve UI/UX Design Skills</li>
+<li>Build High Performance Websites</li>
+
+</ul>
+
+</div>
+
+<div class="goal-box">
+
+<h3>
+🌍 Long Term Vision
+</h3>
+
+<ul>
+
+<li>Become a World Class Developer</li>
+<li>Build Innovative Products</li>
+<li>Create Educational Platforms</li>
+<li>Contribute to Open Source</li>
+<li>Help Millions Through Technology</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Achievements -->
+
+<section id="achievements">
+
+<h2 class="section-title">
+Achievements & Milestones
+</h2>
+
+<div class="achievement-container">
+
+<div class="achievement-box">
+<h3>50+</h3>
+<p>Projects Completed</p>
+</div>
+
+<div class="achievement-box">
+<h3>100+</h3>
+<p>Hours of Learning</p>
+</div>
+
+<div class="achievement-box">
+<h3>100%</h3>
+<p>Passion for Technology</p>
+</div>
+
+<div class="achievement-box">
+<h3>∞</h3>
+<p>Future Possibilities</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Quote -->
+
+<section class="quote-section">
+
+<div class="quote-box">
+
+<h2>
+"Dream Big. Learn Daily.
+Build Consistently.
+Success Will Follow."
+</h2>
+
+<p>
+— Mr. AK
+</p>
+
+</div>
+
+</section>
+
+<style>
+
+/* Projects */
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:#161b22;
+padding:30px;
+border-radius:20px;
+border:1px solid #222;
+transition:.4s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,255,153,.3);
+border-color:#00ff99;
+}
+
+.project-card h3{
+color:#00ff99;
+margin-bottom:15px;
+}
+
+.project-card p{
+line-height:1.8;
+color:#ccc;
+margin-bottom:15px;
+}
+
+.project-card ul{
+padding-left:20px;
+line-height:2;
+color:#ddd;
+}
+
+/* Journey */
+
+.journey-content{
+background:#161b22;
+padding:40px;
+border-radius:20px;
+line-height:2;
+color:#ccc;
+border:1px solid #222;
+}
+
+.journey-content h3{
+color:#00ff99;
+margin-bottom:20px;
+}
+
+/* Experience */
+
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.exp-box{
+background:#161b22;
+padding:30px;
+border-radius:20px;
+text-align:center;
+border:1px solid #222;
+transition:.4s;
+}
+
+.exp-box:hover{
+transform:translateY(-10px);
+border-color:#00ff99;
+}
+
+.exp-box h3{
+color:#00ff99;
+margin-bottom:15px;
+}
+
+/* Goals */
+
+.goals-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.goal-box{
+background:#161b22;
+padding:35px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.goal-box h3{
+color:#00ff99;
+margin-bottom:20px;
+}
+
+.goal-box ul{
+padding-left:20px;
+line-height:2;
+}
+
+/* Achievements */
+
+.achievement-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.achievement-box{
+background:#161b22;
+padding:35px;
+text-align:center;
+border-radius:20px;
+border:1px solid #222;
+transition:.4s;
+}
+
+.achievement-box:hover{
+transform:translateY(-10px);
+border-color:#00ff99;
+}
+
+.achievement-box h3{
+font-size:45px;
+color:#00ff99;
+margin-bottom:10px;
+}
+
+/* Quote */
+
+.quote-box{
+text-align:center;
+background:#161b22;
+padding:50px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.quote-box h2{
+font-size:35px;
+color:#00ff99;
+margin-bottom:20px;
+}
+
+.quote-box p{
+font-size:18px;
+color:#ccc;
+}
+
+/* Contact */
+
+.contact-container{
+max-width:900px;
+margin:auto;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:18px;
+background:#161b22;
+border:1px solid #222;
+color:white;
+border-radius:12px;
+outline:none;
+}
+
+.contact-form textarea{
+height:180px;
+resize:none;
+}
+
+.contact-form button{
+padding:18px;
+border:none;
+background:#00ff99;
+font-size:18px;
+font-weight:700;
+border-radius:50px;
+cursor:pointer;
+transition:.4s;
+}
+
+.contact-form button:hover{
+box-shadow:0 0 25px #00ff99;
+}
+
+/* Footer */
+
+footer{
+padding:40px;
+text-align:center;
+background:#090c10;
+margin-top:80px;
+}
+
+footer h3{
+color:#00ff99;
+margin-bottom:10px;
+}
+
+footer p{
+color:#aaa;
+line-height:1.8;
+}
+
+/* Animation */
+
+.fade{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+
+<!-- Contact Section -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<div class="contact-container">
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Write Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<h3>
+Mr. AK | Journey of Life
+</h3>
+
+<p>
+
+Full Stack Developer • Content Creator • Tech Enthusiast
+
+</p>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</footer>
+
+<script>
+
+/* Scroll Animation */
+
+const observer = new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.classList.add("fade");
+
+observer.observe(sec);
+
+});
+
+</script>
+
+</body>
+</html>
