@@ -1,325 +1,530 @@
-# 🤖 10 Jobs That Will Disappear Before 2030 — And What Will Replace Them?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p align="center">
-  <img src="future-jobs-banner.jpg" alt="Future Jobs Banner" width="100%">
+<title>Future Jobs 2030 | Journey Of My Life</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL RESET ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#05070d;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+body::before{
+content:'';
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#00ff99 0%,transparent 40%);
+opacity:0.08;
+animation:moveBg 10s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-200px,100px);}
+100%{transform:translate(0,0);}
+}
+
+/* ===== HEADER ===== */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid #111;
+}
+
+.logo{
+font-size:26px;
+font-weight:800;
+color:#00ff99;
+letter-spacing:1px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:22px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ff99;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 8%;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+url('future-jobs-banner.jpg');
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.hero-content h1{
+font-size:55px;
+font-weight:800;
+line-height:1.3;
+}
+
+.hero-content span{
+color:#00ff99;
+text-shadow:0 0 20px #00ff99;
+}
+
+.hero-content p{
+margin-top:20px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+color:#ccc;
+line-height:1.8;
+font-size:17px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#00ff99;
+color:#000;
+font-weight:700;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px #00ff99;
+}
+
+/* ===== SECTION BASIC ===== */
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#00ff99;
+}
+
+/* ===== INTRO BOX ===== */
+.intro{
+background:#0b0f1a;
+padding:40px;
+border-radius:20px;
+border:1px solid #111;
+line-height:1.9;
+color:#ccc;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* ===== HIGHLIGHT TEXT ===== */
+.highlight{
+color:#00ff99;
+font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Journey Of My Life</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#intro">Intro</a>
+<a href="#jobs">Jobs</a>
+<a href="#future">Future</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+
+<h1>
+🤖 Future of Work in <span>2030</span>
+</h1>
+
+<p>
+Discover how AI, automation, and technology are transforming the job market
+and which careers will disappear or evolve in the coming years.
 </p>
 
-<p align="center">
-  <img src="future-jobs-2030-banner.jpg" alt="Future Jobs 2030 Banner" width="100%">
+<a href="#intro" class="btn">Start Reading</a>
+
+</div>
+</section>
+
+<!-- INTRO -->
+<section id="intro">
+
+<h2 class="section-title">🌍 Introduction</h2>
+
+<div class="intro">
+
+The world is changing faster than ever before.
+Artificial Intelligence, robotics, and automation are reshaping industries.
+
+By 2030, many traditional jobs will either disappear or evolve into advanced digital roles.
+
+This article explains everything in a simple and powerful way so you can understand
+<spn class="highlight">future career trends</span> and prepare yourself.
+
+</div>
+
+</section>
+<!-- ===== JOBS SECTION ===== -->
+<section id="jobs">
+
+<h2 class="section-title">📉 10 Jobs That Will Disappear</h2>
+
+<div class="grid">
+
+<!-- CARD 1 -->
+<div class="card">
+<h3>📊 Data Entry Operators</h3>
+<p>Replaced by AI automation tools and smart data processing systems.</p>
+</div>
+
+<!-- CARD 2 -->
+<div class="card">
+<h3>📞 Customer Support Agents</h3>
+<p>AI chatbots and virtual assistants handle most customer queries now.</p>
+</div>
+
+<!-- CARD 3 -->
+<div class="card">
+<h3>🛒 Cashiers</h3>
+<p>Self checkout systems and digital payments reduce human need.</p>
+</div>
+
+<!-- CARD 4 -->
+<div class="card">
+<h3>📢 Telemarketers</h3>
+<p>AI marketing systems automate sales calls and promotions.</p>
+</div>
+
+<!-- CARD 5 -->
+<div class="card">
+<h3>🧾 Basic Accountants</h3>
+<p>Accounting software and AI tools manage finances automatically.</p>
+</div>
+
+<!-- CARD 6 -->
+<div class="card">
+<h3>🏭 Factory Workers</h3>
+<p>Robotics and automation systems replace manual production work.</p>
+</div>
+
+<!-- CARD 7 -->
+<div class="card">
+<h3>✈️ Travel Agents</h3>
+<p>Online booking apps and AI travel planners dominate industry.</p>
+</div>
+
+<!-- CARD 8 -->
+<div class="card">
+<h3>🎨 Basic Designers</h3>
+<p>AI tools generate logos, banners, and graphics instantly.</p>
+</div>
+
+<!-- CARD 9 -->
+<div class="card">
+<h3>🚗 Drivers</h3>
+<p>Self-driving vehicles and autonomous transport systems emerging.</p>
+</div>
+
+<!-- CARD 10 -->
+<div class="card">
+<h3>✍️ Content Writers</h3>
+<p>AI writing tools produce blogs, ads, and scripts quickly.</p>
+</div>
+
+</div>
+</section>
+
+<!-- ===== FUTURE CAREERS ===== -->
+<section id="future">
+
+<h2 class="section-title">🚀 New Careers in Future</h2>
+
+<div class="grid">
+
+<div class="card glow">
+<h3>🤖 AI Engineer</h3>
+<p>Build intelligent systems and machine learning models.</p>
+</div>
+
+<div class="card glow">
+<h3>☁️ Cloud Architect</h3>
+<p>Design scalable cloud-based infrastructure systems.</p>
+</div>
+
+<div class="card glow">
+<h3>🔐 Cyber Security Expert</h3>
+<p>Protect digital systems from cyber threats.</p>
+</div>
+
+<div class="card glow">
+<h3>📊 Data Scientist</h3>
+<p>Analyze large datasets for business decisions.</p>
+</div>
+
+<div class="card glow">
+<h3>🧠 Prompt Engineer</h3>
+<p>Communicate effectively with AI systems.</p>
+</div>
+
+<div class="card glow">
+<h3>🎮 AR/VR Developer</h3>
+<p>Create immersive virtual reality experiences.</p>
+</div>
+
+</div>
+</section>
+
+<!-- ===== STYLE FOR PART 2 ===== -->
+<style>
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:#0b0f1a;
+padding:25px;
+border-radius:18px;
+border:1px solid #111;
+transition:.3s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#00ff99;
+box-shadow:0 0 25px rgba(0,255,153,0.3);
+}
+
+/* GLOW CARDS */
+.glow{
+border:1px solid #00ff99;
+box-shadow:0 0 15px rgba(0,255,153,0.2);
+}
+
+.card h3{
+color:#00ff99;
+margin-bottom:10px;
+}
+
+.card p{
+color:#ccc;
+line-height:1.7;
+}
+
+/* SECTION TITLE ANIMATION */
+.section-title{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+</style>
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact">
+
+<h2 class="section-title">📩 Contact Me</h2>
+
+<div class="contact-box">
+
+<p>
+If you want to collaborate, learn coding, or connect for projects —
+feel free to message me.
 </p>
 
-# 🌟 By Journey Of My Life
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send Message 🚀</button>
+</form>
+
+</div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+
+<h3>🌟 Journey Of My Life</h3>
+
+<p>Exploring Technology | AI | Future Jobs | Innovation</p>
+
+<p>© 2026 All Rights Reserved | Made with ❤️ by Mr. AK</p>
+
+</footer>
+
+<!-- ===== STYLE FINAL ===== -->
+<style>
+
+/* CONTACT */
+.contact-box{
+max-width:800px;
+margin:auto;
+background:#0b0f1a;
+padding:40px;
+border-radius:20px;
+border:1px solid #111;
+text-align:center;
+}
+
+.contact-box p{
+color:#ccc;
+margin-bottom:20px;
+line-height:1.7;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:15px;
+border-radius:10px;
+border:1px solid #222;
+background:#05070d;
+color:#fff;
+outline:none;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+padding:15px;
+background:#00ff99;
+border:none;
+font-weight:700;
+cursor:pointer;
+border-radius:30px;
+transition:.3s;
+}
+
+button:hover{
+box-shadow:0 0 20px #00ff99;
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:50px;
+background:#05070d;
+border-top:1px solid #111;
+margin-top:80px;
+}
+
+footer h3{
+color:#00ff99;
+margin-bottom:10px;
+}
+
+footer p{
+color:#aaa;
+line-height:1.6;
+}
+
+/* SCROLL ANIMATION */
+section{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
 
----
+section.show{
+opacity:1;
+transform:translateY(0);
+}
 
-## 🌍 Introduction
+</style>
 
-The world is going through one of the fastest technological revolutions in human history.
+<!-- ===== JAVASCRIPT ANIMATION ===== -->
+<script>
 
-Artificial Intelligence (AI), automation, robotics, machine learning, and digital transformation are not just improving industries—they are completely reshaping them. Jobs that once required human effort, time, and skill are now being handled by intelligent systems in seconds.
+// Scroll Animation
+const sections = document.querySelectorAll("section");
 
-This change is not something of the future anymore—it is happening right now.
+window.addEventListener("scroll", () => {
 
-Experts predict that by 2030, millions of traditional jobs will either disappear or evolve into completely new roles. At the same time, new career opportunities will emerge that did not even exist a few years ago.
+sections.forEach(sec => {
 
-This raises an important question for everyone:
+const top = window.scrollY;
+const offset = sec.offsetTop - 300;
 
-> **Will your current job still exist in the future, or will it be replaced by technology?**
+if(top > offset){
+sec.classList.add("show");
+}
 
-In this article, we will explore the jobs most at risk, why they are disappearing, and what new opportunities are replacing them in the modern digital world.
+});
 
----
+});
 
-# ⚡ Why Jobs Are Disappearing So Fast?
+</script>
 
-Before understanding specific jobs, it is important to know the main reasons behind this massive shift:
-
-## 🤖 1. Artificial Intelligence (AI)
-
-AI can now perform tasks like writing, analyzing data, customer support, and even designing.
-
-## ⚙️ 2. Automation
-
-Machines and software are replacing repetitive human work in factories, offices, and services.
-
-## 🌐 3. Digital Transformation
-
-Everything is moving online—banking, shopping, education, and communication.
-
-## 💡 4. Cost Efficiency
-
-Companies prefer machines because they reduce cost, errors, and time.
-
-## 🚀 5. Speed & Accuracy
-
-Technology works faster and more accurately than humans in many tasks.
-
----
-
-# 📉 1. Data Entry Operators
-
-For decades, data entry was one of the most common office jobs. Employees manually entered information into systems.
-
-But now, AI tools and automation software can process massive amounts of data instantly with almost zero errors.
-
-## ❌ Why It Will Disappear:
-
-* Repetitive manual work
-* High error rate compared to AI
-* Fully automatable process
-
-## ✅ What Will Replace It:
-
-* AI Data Analysts
-* Data Automation Engineers
-* Business Intelligence Specialists
-* Data Quality Managers
-
----
-
-# 📞 2. Basic Customer Support Agents
-
-Customer support is rapidly changing due to AI chatbots and virtual assistants.
-
-Many companies now use AI systems that can answer thousands of queries 24/7 without human involvement.
-
-## ❌ Why It Will Disappear:
-
-* AI chatbots are faster
-* No need for human repetition
-* Cost reduction for companies
-
-## ✅ What Will Replace It:
-
-* AI Customer Experience Designers
-* Chatbot Trainers
-* Customer Success Managers
-* Human-AI Hybrid Support Experts
-
----
-
-# 🛒 3. Traditional Cashiers
-
-Retail stores are shifting toward self-checkout systems and digital payments.
-
-Customers now prefer scanning and paying without waiting in long queues.
-
-## ❌ Why It Will Disappear:
-
-* Self-checkout machines
-* Mobile payment systems
-* Automation in retail stores
-
-## ✅ What Will Replace It:
-
-* Smart Retail Managers
-* Digital Payment Specialists
-* Retail Technology Operators
-
----
-
-# 📢 4. Telemarketers
-
-Cold calling and manual sales calls are becoming outdated.
-
-AI-powered systems can now analyze customer behavior and send personalized offers automatically.
-
-## ❌ Why It Will Disappear:
-
-* Low conversion rate
-* Customer irritation
-* AI automation in marketing
-
-## ✅ What Will Replace It:
-
-* Digital Marketing Strategists
-* AI Sales Automation Experts
-* Growth Hackers
-
----
-
-# 🧾 5. Basic Accountants
-
-Accounting is no longer fully manual. Software now handles tax calculations, invoices, and financial reports.
-
-## ❌ Why It Will Disappear:
-
-* Automated accounting tools
-* AI financial systems
-* Cloud-based bookkeeping
-
-## ✅ What Will Replace It:
-
-* Financial Data Analysts
-* AI Finance Consultants
-* Business Intelligence Experts
-
----
-
-# 🏭 6. Manufacturing Workers
-
-Factories are becoming highly automated with robotics and smart machines.
-
-These machines can work 24/7 without breaks or fatigue.
-
-## ❌ Why It Will Disappear:
-
-* Industrial robots
-* Smart production systems
-* Automation efficiency
-
-## ✅ What Will Replace It:
-
-* Robotics Engineers
-* Automation Technicians
-* Industrial AI Specialists
-
----
-
-# ✈️ 7. Travel Agents
-
-Travel planning has become fully digital with apps and AI travel assistants.
-
-People can now book flights, hotels, and tours in minutes.
-
-## ❌ Why It Will Disappear:
-
-* Online booking platforms
-* AI travel planners
-* Direct customer booking
-
-## ✅ What Will Replace It:
-
-* Travel Experience Designers
-* Luxury Travel Consultants
-* AI Travel Curators
-
----
-
-# 🎨 8. Basic Graphic Designers
-
-AI tools can now generate logos, posters, and designs in seconds.
-
-This is changing the creative industry rapidly.
-
-## ❌ Why It Will Disappear:
-
-* AI design tools
-* Template-based automation
-* Fast content generation
-
-## ✅ What Will Replace It:
-
-* Creative Directors
-* Brand Identity Experts
-* AI Design Specialists
-* Creative Strategists
-
----
-
-# 🚗 9. Drivers
-
-Self-driving technology is improving every year.
-
-Autonomous vehicles are already being tested in many countries.
-
-## ❌ Why It Will Disappear:
-
-* Self-driving cars
-* Delivery automation
-* Smart transport systems
-
-## ✅ What Will Replace It:
-
-* Autonomous Vehicle Engineers
-* Fleet AI Managers
-* Smart Mobility Experts
-
----
-
-# ✍️ 10. Traditional Content Writers
-
-AI can now write blogs, ads, emails, and scripts in seconds.
-
-However, human creativity is still important for storytelling and strategy.
-
-## ❌ Why It Will Disappear:
-
-* AI content generators
-* Automated writing tools
-* Fast content production
-
-## ✅ What Will Replace It:
-
-* AI Content Strategists
-* Storytelling Experts
-* Brand Communication Specialists
-* Prompt Engineers
-
----
-
-# 🚀 The New Careers of the Future
-
-While some jobs are disappearing, many powerful new careers are emerging:
-
-✅ Artificial Intelligence Engineer
-✅ Prompt Engineer
-✅ Cyber Security Expert
-✅ Cloud Computing Specialist
-✅ Data Scientist
-✅ Machine Learning Engineer
-✅ Robotics Engineer
-✅ Digital Creator
-✅ Automation Consultant
-✅ AI Product Manager
-
----
-
-# 🧠 Skills That Will Matter Most in 2030
-
-To survive and grow in the future job market, focus on these skills:
-
-* Problem Solving
-* Critical Thinking
-* Creativity
-* Communication Skills
-* Digital Literacy
-* AI Tool Knowledge
-* Adaptability
-* Continuous Learning
-
----
-
-# 🔥 How to Prepare for the Future
-
-Instead of fearing technology, learn how to use it.
-
-## 🚀 Start Now:
-
-1. Learn AI tools and platforms
-2. Build digital skills
-3. Start online projects
-4. Improve communication skills
-5. Practice continuous learning
-6. Explore freelancing or content creation
-
----
-
-# 🎯 Final Thoughts
-
-The future of work is not about losing jobs—it is about changing jobs.
-
-Technology is not your enemy. It is a powerful tool that can either replace you or empower you, depending on how you use it.
-
-The real difference will be made by people who adapt, learn, and grow with technology.
-
-> The future does not belong to those who fear change.
-> It belongs to those who create it.
-
----
-
-## 🌟 Journey Of My Life
-
-### Exploring Technology, Future Trends, AI, Careers, and Digital Success
-
-*"The future belongs to those who prepare for it today."*
+</body>
+</html>
