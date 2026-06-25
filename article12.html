@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber God Dashboard 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+background:#000;
+color:#00ff88;
+font-family:'Poppins',sans-serif;
+overflow:hidden;
+}
+
+/* ===== LOGIN ===== */
+#login{
+position:fixed;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:#000;
+z-index:9999;
+}
+
+input{
+padding:10px;
+margin:10px;
+background:#111;
+border:1px solid #00ff88;
+color:#00ff88;
+}
+
+button{
+padding:10px 20px;
+background:transparent;
+border:1px solid #00ff88;
+color:#00ff88;
+cursor:pointer;
+}
+
+button:hover{
+background:#00ff88;
+color:#000;
+}
+
+/* ===== DASHBOARD ===== */
+#dash{
+display:none;
+height:100vh;
+display:grid;
+grid-template-columns:250px 1fr 300px;
+}
+
+/* SIDEBAR */
+#sidebar{
+background:#050505;
+border-right:1px solid #00ff88;
+padding:20px;
+}
+
+.level{
+margin-top:20px;
+font-family:'Share Tech Mono';
+}
+
+/* MAIN */
+#main{
+padding:20px;
+overflow:auto;
+}
+
+.card{
+background:#050505;
+border:1px solid #00ff88;
+padding:15px;
+margin-bottom:10px;
+}
+
+/* RIGHT PANEL */
+#right{
+background:#050505;
+border-left:1px solid #00ff88;
+padding:20px;
+}
+
+/* TERMINAL */
+#terminal{
+height:200px;
+overflow:auto;
+border:1px solid #00ff88;
+padding:10px;
+font-family:'Share Tech Mono';
+}
+
+/* MAP */
+#map{
+height:200px;
+background:black;
+border:1px solid #00ff88;
+margin-top:10px;
+position:relative;
+overflow:hidden;
+}
+
+.dot{
+position:absolute;
+width:5px;
+height:5px;
+background:#00ff88;
+border-radius:50%;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0.2;}
+}
+
+/* AI CHAT */
+#chat{
+height:150px;
+overflow:auto;
+border:1px solid #00ff88;
+padding:10px;
+font-family:'Share Tech Mono';
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+<h2>🔐 CYBER LOGIN</h2>
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">ENTER SYSTEM</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dash">
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+<h3>🕶 Hacker Profile</h3>
+<p id="name">User: ---</p>
+<p>XP: <span id="xp">0</span></p>
+
+<div class="level">
+MISSION LEVEL: <span id="level">1</span>
+</div>
+
+<button onclick="mission()">START MISSION</button>
+<button onclick="hackSound()">VOICE ACCESS</button>
+
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+<h2>🎮 Hacker Missions</h2>
+
+<div class="card" id="missionBox">
+> No mission active
+</div>
+
+<div class="card">
+<h3>💻 Terminal</h3>
+<div id="terminal">> System Ready</div>
+</div>
+
+<div class="card">
+<h3>🌐 Global Cyber Map</h3>
+<div id="map"></div>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div id="right">
+
+<h3>🤖 AI Hacker Assistant</h3>
+<div id="chat"></div>
+<input id="msg" placeholder="Ask AI..." onkeypress="ask(event)">
+
+</div>
+
+</div>
+
+<script>
+
+/* ===== GLOBAL ===== */
+let xp=0;
+let lvl=1;
+
+/* ===== LOGIN ===== */
+function login(){
+let u=document.getElementById("user").value;
+
+if(u===""){
+alert("Enter username");
+return;
+}
+
+document.getElementById("login").style.display="none";
+document.getElementById("dash").style.display="grid";
+
+document.getElementById("name").innerText="User: "+u;
+
+}
+
+/* ===== MISSION SYSTEM ===== */
+function mission(){
+
+xp+=10;
+if(xp%30===0) lvl++;
+
+document.getElementById("xp").innerText=xp;
+document.getElementById("level").innerText=lvl;
+
+let missions=[
+"Scan target network...",
+"Bypass firewall layers...",
+"Analyze encryption...",
+"Locate vulnerability...",
+"System breach simulation completed ✔"
+];
+
+let m=missions[Math.floor(Math.random()*missions.length)];
+document.getElementById("missionBox").innerText=m;
+
+write("> Mission started: "+m);
+}
+
+/* ===== TERMINAL ===== */
+function write(t){
+document.getElementById("terminal").innerHTML+="<br>"+t;
+}
+
+/* ===== AI CHAT ===== */
+function ask(e){
+if(e.key==="Enter"){
+let msg=document.getElementById("msg").value;
+let chat=document.getElementById("chat");
+
+chat.innerHTML+="<br>You: "+msg;
+
+let res="AI: System analyzing '"+msg+"' ... response: Cyber security protocol active.";
+
+chat.innerHTML+="<br>"+res;
+
+document.getElementById("msg").value="";
+}
+}
+
+/* ===== VOICE SIMULATION ===== */
+function hackSound(){
+let msg=new SpeechSynthesisUtterance("Access Granted. Welcome hacker.");
+speechSynthesis.speak(msg);
+alert("ACCESS GRANTED ✔");
+}
+
+/* ===== GLOBAL MAP ===== */
+let map=document.getElementById("map");
+
+for(let i=0;i<30;i++){
+let dot=document.createElement("div");
+dot.className="dot";
+dot.style.top=Math.random()*100+"%";
+dot.style.left=Math.random()*100+"%";
+map.appendChild(dot);
+}
+
+</script>
+
+</body>
+</html>
