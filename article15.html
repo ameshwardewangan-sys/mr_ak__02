@@ -1438,20 +1438,30 @@ opacity:.35;
 <div class="article">
 
 <div class="hero">
-
+  
 .rama-hero{
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    padding: 40px 20px;
+    position:relative;
+    width:100%;
+    min-height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    overflow:hidden;
 
-    background: url("images/ramayana-the-eternal-epic-of-dharma-banner.jpg") center center no-repeat;
-    background-size: contain;
-    background-color: #0b0b0b;
+    background-image:url("images/ramayana-the-eternal-epic-of-dharma-banner.jpg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+    background-color:#000;
+}
+
+@media (max-width:768px){
+    .rama-hero{
+        min-height:45vh;
+        background-size:100% auto;
+    }
 }
 
 <div class="hero-content">
