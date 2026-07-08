@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhatrapati Shivaji Maharaj: The Maratha Icon | Journey of My Life</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #333; margin: 0; background-color: #f9f9f9; }
+        .banner { width: 100%; height: 450px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; }
+        .container { max-width: 900px; margin: -50px auto 20px; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+        h1 { color: #d35400; text-align: center; font-size: 2.8em; margin-bottom: 10px; }
+        .author-info { text-align: center; font-style: italic; color: #555; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        h2 { border-left: 5px solid #d35400; padding-left: 15px; color: #2c3e50; margin-top: 40px; }
+        .animate-box { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .show { opacity: 1; transform: translateY(0); }
+        .contact-section { margin-top: 50px; padding: 30px; background: #2c3e50; color: white; border-radius: 10px; text-align: center; }
+        footer { text-align: center; padding: 30px; font-size: 0.9em; color: #777; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <!-- सुनिश्चित करें कि इस नाम की फाइल आपके फोल्डर में है -->
+        <img src="shivaji-banner.jpg" alt="Chhatrapati Shivaji Maharaj">
+    </div>
+
+    <div class="container">
+        <h1 class="animate-box">Chhatrapati Shivaji Maharaj: The Founder of Hindavi Swarajya</h1>
+        <div class="author-info animate-box">
+            By <strong>Ameshwar Dewangan</strong> | Published on <em>Journey of My Life</em>
+        </div>
+        
+        <div class="animate-box">
+            <h2>The Visionary Leader</h2>
+            <p>Chhatrapati Shivaji Maharaj is not just a historical figure; he is an emotion for millions. Born on February 19, 1630, at Shivneri Fort, he rose from a small jagir to establish a sovereign Maratha Empire. His life is a story of grit, tactical brilliance, and unparalleled courage.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Master of Guerrilla Warfare</h2>
+            <p>Shivaji Maharaj is widely regarded as the 'Father of Indian Navy' and the master of 'Ganimi Kava' (Guerrilla Warfare). By utilizing the rugged terrain of the Sahyadri mountains, he successfully challenged the mighty Mughal Empire and the Adil Shahi Sultanate. His ability to anticipate the enemy's moves made him invincible.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Establishment of Hindavi Swarajya</h2>
+            <p>His ultimate goal was 'Hindavi Swarajya' – self-rule for the people. He did not just fight for land; he fought for justice, women's honor, and the protection of culture. He implemented a highly efficient administrative system, the 'Ashta Pradhan Mandal' (Council of Eight Ministers), which served as the backbone of his governance.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Forts: The Pride of the Marathas</h2>
+            <p>Shivaji Maharaj recognized that control over forts was essential for a strong defense. He captured and strengthened several iconic forts, including Raigad, Pratapgad, and Sindhudurg. These forts were not just military bases; they were centers of administration and culture.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>The Legacy Lives On</h2>
+            <p>Even centuries after his passing in 1680, Shivaji Maharaj’s ideals continue to guide us. He taught the world that with a clear vision and a disciplined army, even the greatest of empires can be challenged. His life remains the ultimate example of leadership and patriotism.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section animate-box">
+            <h3>Learn more about Indian history</h3>
+            <p>Stay connected with <strong>Ameshwar Dewangan</strong> on <em>Journey of My Life</em></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Journey of My Life. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const boxes = document.querySelectorAll('.animate-box');
+        window.addEventListener('scroll', () => {
+            boxes.forEach(box => {
+                if(box.getBoundingClientRect().top < window.innerHeight - 100) {
+                    box.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
