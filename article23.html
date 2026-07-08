@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neelkanth Varni: The Eternal Journey | Journey of My Life</title>
+    <style>
+        body { font-family: 'Palatino Linotype', serif; line-height: 1.8; color: #2c3e50; margin: 0; background-color: #fdfcf0; }
+        .banner { width: 100%; height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; }
+        .container { max-width: 900px; margin: -60px auto 40px; padding: 50px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; border-top: 5px solid #d4af37; }
+        h1 { color: #b8860b; text-align: center; font-size: 2.8em; margin-bottom: 10px; }
+        .author-info { text-align: center; font-style: italic; color: #555; margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+        h2 { color: #b8860b; margin-top: 40px; border-bottom: 2px solid #b8860b; display: inline-block; }
+        .animate-box { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+        .show { opacity: 1; transform: translateY(0); }
+        .highlight { background: #fffdf0; padding: 20px; border-left: 5px solid #d4af37; font-style: italic; }
+        .footer-cta { margin-top: 60px; padding: 40px; background: #2c3e50; color: #fdfcf0; border-radius: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <!-- Banner Image: neelkanth-banner.jpg -->
+        <img src="neelkanth-banner.jpg" alt="Neelkanth Varni">
+    </div>
+
+    <div class="container">
+        <h1 class="animate-box">Neelkanth Varni: The Divine Wanderer</h1>
+        <div class="author-info animate-box">
+            By <strong>Ameshwar Dewangan</strong> | Published on <em>Journey of My Life</em>
+        </div>
+        
+        <div class="animate-box">
+            <h2>The Beginning of a Sacred Quest</h2>
+            <p>The story of Neelkanth Varni is one of the most mesmerizing chapters in Indian spiritual history. At the tender age of 11, leaving behind his home in Chhapaiya, a young boy embarked on a journey that would span thousands of miles across the Indian subcontinent. This was not a physical journey alone; it was a mission to restore Dharma.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>The Rigors of the Forest</h2>
+            <p>Clad only in a piece of loincloth, carrying a small bundle of belongings, Neelkanth Varni walked barefoot through dense forests, scorching deserts, and freezing Himalayan peaks. He faced tigers, extreme weather, and solitude, yet his face always radiated a divine calmness. He was the personification of 'Vairagya' (detachment).</p>
+        </div>
+
+        <div class="animate-box highlight">
+            "He was a silent observer, a preacher of non-violence, and a master of Yogic powers, yet he lived like the humblest of beings, showing the world that true greatness lies in simplicity and surrender to the Divine."
+        </div>
+
+        <div class="animate-box">
+            <h2>The Himalayan Penance</h2>
+            <p>One of the most inspiring phases of his journey was his stay in the Himalayas. He performed intense penance in the icy caves, where even the greatest Yogis feared to tread. His journey was a beacon for seekers, proving that devotion coupled with discipline can unlock the highest realms of consciousness.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Legacy of Compassion</h2>
+            <p>Throughout his seven-year journey, Neelkanth Varni visited countless holy shrines, met hundreds of ascetics, and taught the path of pure devotion. He eventually settled in Gujarat, where he blossomed into Lord Swaminarayan, the founder of the Swaminarayan Sampradaya, leaving behind a legacy that continues to touch millions of hearts today.</p>
+        </div>
+
+        <div class="footer-cta animate-box">
+            <h3>Reflecting on the Divine Journey</h3>
+            <p>Join <strong>Ameshwar Dewangan</strong> on <em>Journey of My Life</em> as we explore more such stories of faith and courage.</p>
+        </div>
+    </div>
+
+    <script>
+        const boxes = document.querySelectorAll('.animate-box');
+        window.addEventListener('scroll', () => {
+            boxes.forEach(box => {
+                if(box.getBoundingClientRect().top < window.innerHeight - 100) {
+                    box.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
