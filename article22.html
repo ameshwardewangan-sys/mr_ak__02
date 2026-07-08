@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premanand Ji Maharaj: The Saint of Love | Journey of My Life</title>
+    <style>
+        body { font-family: 'Georgia', serif; line-height: 1.8; color: #444; margin: 0; background-color: #fdfaf6; }
+        .banner { width: 100%; height: 500px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); }
+        .container { max-width: 850px; margin: -80px auto 40px; padding: 50px; background: white; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); position: relative; }
+        h1 { color: #8e44ad; text-align: center; font-size: 3em; margin-bottom: 10px; }
+        .author-info { text-align: center; font-style: italic; color: #777; margin-bottom: 40px; border-bottom: 2px solid #8e44ad; padding-bottom: 20px; }
+        h2 { color: #8e44ad; margin-top: 50px; border-left: 6px solid #8e44ad; padding-left: 15px; }
+        .quote-box { background: #f3e5f5; padding: 30px; border-radius: 15px; text-align: center; font-style: italic; font-size: 1.4em; color: #4a148c; margin: 40px 0; border: 2px dashed #8e44ad; }
+        .animate-box { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
+        .show { opacity: 1; transform: translateY(0); }
+        .contact-section { margin-top: 60px; padding: 40px; background: #4a148c; color: white; border-radius: 15px; text-align: center; }
+        footer { text-align: center; padding: 40px; font-size: 0.9em; color: #888; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <!-- Banner Image: premanand-banner.jpg -->
+        <img src="premanand-banner.jpg" alt="Premanand Ji Maharaj">
+    </div>
+
+    <div class="container">
+        <h1 class="animate-box">Premanand Ji Maharaj: A Beacon of Divine Love</h1>
+        <div class="author-info animate-box">
+            By <strong>Ameshwar Dewangan</strong> | Published on <em>Journey of My Life</em>
+        </div>
+        
+        <div class="animate-box">
+            <h2>The Spiritual Journey</h2>
+            <p>Pujya Aniruddhacharya Ji (Premanand Ji Maharaj) is not merely a saint; he is a source of solace for millions who are lost in the chaos of the material world. His teachings are rooted in pure 'Bhakti' (Devotion) and 'Radha-Krishna' consciousness. From a very young age, he embraced the path of detachment, seeking the eternal truth beyond worldly illusions.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>The Philosophy of 'Bhakti'</h2>
+            <p>Maharaj Ji emphasizes that the ultimate goal of human life is to realize the divine love of Radha Rani. He teaches that through 'Nama-Japa' (chanting the holy name) and 'Satsang' (company of truth), one can transcend the cycle of life and death. His sessions are a mix of profound wisdom, simple logic, and immense love for the creator.</p>
+        </div>
+
+        <div class="quote-box animate-box">
+            "राधे-राधे जपने से न केवल पापों का नाश होता है, बल्कि आत्मा का परमात्मा से मिलन सुलभ हो जाता है। सेवा और समर्पण ही भक्ति का वास्तविक स्वरूप है।"
+        </div>
+
+        <div class="animate-box">
+            <h2>Guidance for Modern Life</h2>
+            <p>In today's fast-paced world, Maharaj Ji provides practical solutions to mental anxiety, depression, and confusion. He suggests that while living in the world, one must keep their mind connected to the divine. His unique ability to answer complex life problems with simple, heartfelt advice has made him a household name across India.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>The Power of 'Nama-Japa'</h2>
+            <p>Maharaj Ji strongly advocates for the power of the divine name. He believes that the name of 'Radha' is the most powerful force in the universe. By chanting with sincerity, a devotee can find peace amidst the toughest challenges of life. His life is a living testament to the fact that faith can move mountains.</p>
+        </div>
+
+        <div class="contact-section animate-box">
+            <h3>Find Peace and Guidance</h3>
+            <p>Join <strong>Ameshwar Dewangan</strong> on <em>Journey of My Life</em> for more such spiritual journeys.</p>
+            <p>Stay connected for daily wisdom!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Journey of My Life. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const boxes = document.querySelectorAll('.animate-box');
+        window.addEventListener('scroll', () => {
+            boxes.forEach(box => {
+                const elementTop = box.getBoundingClientRect().top;
+                if(elementTop < window.innerHeight - 100) {
+                    box.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
