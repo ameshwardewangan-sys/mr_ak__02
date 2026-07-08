@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharana Pratap: The Eternal Warrior</title>
+    <style>
+        /* CSS Design */
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.8; color: #333; margin: 0; background-color: #f4f4f4; }
+        .banner { width: 100%; height: 400px; background: #2c3e50; display: flex; align-items: center; justify-content: center; color: white; overflow: hidden; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; }
+        .container { max-width: 900px; margin: 20px auto; padding: 40px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #d35400; text-align: center; font-size: 2.5em; }
+        h2 { border-left: 5px solid #d35400; padding-left: 15px; color: #2c3e50; margin-top: 30px; }
+        .animate-box { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .show { opacity: 1; transform: translateY(0); }
+        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <!-- Banner Image Name -->
+        <img src="maharana-banner.jpg" alt="Maharana Pratap">
+    </div>
+
+    <div class="container">
+        <h1 class="animate-box">Maharana Pratap: The Symbol of Unyielding Valor</h1>
+        
+        <div class="animate-box">
+            <h2>The Legacy Begins</h2>
+            <p>Maharana Pratap Singh I was the 13th King of Mewar, a region in north-western India in the present-day state of Rajasthan. Born on May 9, 1540, to Maharana Udai Singh II and Rani Jaiwanta Bai, he was destined to become one of history's most iconic figures of resistance.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>The Battle of Haldighati</h2>
+            <p>In 1576, the legendary Battle of Haldighati took place between Maharana Pratap and the forces of the Mughal Emperor Akbar, led by Man Singh I of Amber. Despite being outnumbered, Pratap's bravery became the stuff of legends. He did not bow down to the Mughal empire, choosing a life in the forests over a life of servitude.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Chetak: The Faithful Companion</h2>
+            <p>No story of Maharana Pratap is complete without mentioning his beloved horse, Chetak. Chetak was known for his speed, loyalty, and courage. Even while wounded, Chetak carried his master to safety during the heat of the battle, eventually sacrificing his own life for Pratap's.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Reclaiming Mewar</h2>
+            <p>For years, Pratap lived in the Aravalli hills, organizing the Bhil tribes and launching guerrilla warfare against the Mughals. Through sheer perseverance, he was able to reclaim much of his lost territory, including Kumbhalgarh and Udaipur, before his death in 1597.</p>
+        </div>
+
+        <div class="animate-box">
+            <h2>Why He Remains Immortal</h2>
+            <p>Maharana Pratap is not just a ruler; he represents the spirit of independence. His refusal to enter into a political treaty with Akbar preserved the honor of his kingdom. Today, he is remembered as a guardian of Dharma and a hero who put his people above his own comfort.</p>
+        </div>
+    </div>
+
+    <footer class="animate-box">
+        <p>&copy; 2026 1/2 Journey of My Life. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        /* Animation Script */
+        const boxes = document.querySelectorAll('.animate-box');
+        window.addEventListener('scroll', () => {
+            boxes.forEach(box => {
+                if(box.getBoundingClientRect().top < window.innerHeight - 100) {
+                    box.classList.add('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
