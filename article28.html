@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+The Future of Space Exploration | Journey Of My Life
+</title>
+
+<meta name="description" content="
+The Future of Space Exploration: India's Journey Beyond Earth.
+A premium space technology article by Ameshwar Dewangan.
+">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+
+}
+
+
+body{
+
+background:#020617;
+
+color:white;
+
+font-family:'Poppins',sans-serif;
+
+overflow-x:hidden;
+
+}
+
+
+
+/* ==========================
+   COSMIC BACKGROUND
+========================== */
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at top,#1e3a8a,transparent 35%),
+
+radial-gradient(circle at bottom,#581c87,transparent 40%),
+
+#020617;
+
+z-index:-5;
+
+}
+
+
+
+
+/* STAR ANIMATION */
+
+
+.stars{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+z-index:-2;
+
+}
+
+
+
+.star{
+
+position:absolute;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+animation:starMove linear infinite;
+
+opacity:.8;
+
+}
+
+
+
+@keyframes starMove{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(100vh);
+
+}
+
+
+}
+
+
+
+
+
+/* ==========================
+NAVBAR
+========================== */
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(2,6,23,.55);
+
+backdrop-filter:blur(20px);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+z-index:1000;
+
+
+}
+
+
+
+.logo{
+
+font-family:'Orbitron',sans-serif;
+
+font-size:28px;
+
+font-weight:800;
+
+}
+
+
+
+.logo span{
+
+color:#38bdf8;
+
+text-shadow:
+
+0 0 20px #38bdf8;
+
+}
+
+
+
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+margin-left:30px;
+
+transition:.4s;
+
+}
+
+
+
+nav a:hover{
+
+color:#38bdf8;
+
+text-shadow:
+
+0 0 15px #38bdf8;
+
+}
+
+
+
+/* ==========================
+HERO SECTION
+========================== */
+
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:140px 8% 80px;
+
+
+}
+
+
+
+.hero-box{
+
+
+max-width:1200px;
+
+padding:75px;
+
+border-radius:40px;
+
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(255,255,255,.12),
+
+rgba(255,255,255,.03)
+
+);
+
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(30px);
+
+
+box-shadow:
+
+0 0 100px rgba(56,189,248,.15);
+
+
+animation:heroEntrance 1.5s ease;
+
+
+}
+
+
+
+@keyframes heroEntrance{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(80px) scale(.9);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+
+}
+
+
+
+
+.hero h1{
+
+
+font-family:'Orbitron',sans-serif;
+
+font-size:65px;
+
+line-height:1.2;
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.hero h1 span{
+
+
+color:#38bdf8;
+
+text-shadow:
+
+0 0 30px #38bdf8;
+
+
+}
+
+
+
+
+.hero p{
+
+
+font-size:22px;
+
+line-height:1.9;
+
+color:#cbd5e1;
+
+margin-bottom:40px;
+
+
+}
+
+
+
+/* PLANET */
+
+
+.planet{
+
+
+width:160px;
+
+height:160px;
+
+border-radius:50%;
+
+
+background:
+
+radial-gradient(circle at 30% 30%,
+
+#38bdf8,
+
+#1e3a8a,
+
+#020617);
+
+
+box-shadow:
+
+0 0 80px #38bdf8;
+
+
+animation:planetFloat 5s infinite alternate;
+
+
+margin-bottom:40px;
+
+
+}
+
+
+
+@keyframes planetFloat{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-30px);
+
+}
+
+
+}
+
+
+
+
+.tags{
+
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+.tag{
+
+
+padding:15px 25px;
+
+border-radius:50px;
+
+
+background:rgba(56,189,248,.1);
+
+border:
+
+1px solid rgba(56,189,248,.5);
+
+
+color:#38bdf8;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.tag:hover{
+
+
+transform:translateY(-10px);
+
+
+box-shadow:
+
+0 0 30px #38bdf8;
+
+
+}
+
+
+
+
+
+/* ARTICLE */
+
+
+main{
+
+
+max-width:1150px;
+
+margin:auto;
+
+padding:80px 25px;
+
+
+}
+
+
+
+
+.section{
+
+
+margin-bottom:90px;
+
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+
+}
+
+
+
+.section.show{
+
+
+opacity:1;
+
+transform:translateY(0);
+
+
+}
+
+
+
+
+.section h2{
+
+
+font-family:'Orbitron',sans-serif;
+
+font-size:42px;
+
+color:#38bdf8;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.section p{
+
+
+font-size:19px;
+
+line-height:2;
+
+color:#cbd5e1;
+
+text-align:justify;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+.quote{
+
+
+padding:40px;
+
+background:rgba(56,189,248,.08);
+
+border-left:5px solid #38bdf8;
+
+border-radius:20px;
+
+font-size:25px;
+
+font-style:italic;
+
+line-height:1.8;
+
+
+}
+
+
+
+
+
+/* CARDS */
+
+
+.cards{
+
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+
+}
+
+
+
+
+.card{
+
+
+padding:30px;
+
+
+background:
+
+rgba(255,255,255,.06);
+
+
+border-radius:25px;
+
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+
+transition:.5s;
+
+
+}
+
+
+
+.card:hover{
+
+
+transform:translateY(-15px);
+
+
+box-shadow:
+
+0 0 50px rgba(56,189,248,.25);
+
+
+}
+
+
+
+.card h3{
+
+
+color:#38bdf8;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+footer{
+
+
+padding:80px 20px;
+
+background:#01030b;
+
+text-align:center;
+
+
+}
+
+
+
+footer h2{
+
+
+font-family:'Orbitron',sans-serif;
+
+color:#38bdf8;
+
+font-size:38px;
+
+
+}
+
+
+
+footer p{
+
+
+color:#94a3b8;
+
+margin-top:20px;
+
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+.hero-box{
+
+padding:35px;
+
+}
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+.section h2{
+
+font-size:32px;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="stars">
+
+
+<div class="star" style="left:10%;animation-duration:8s;"></div>
+
+<div class="star" style="left:25%;animation-duration:12s;"></div>
+
+<div class="star" style="left:40%;animation-duration:10s;"></div>
+
+<div class="star" style="left:60%;animation-duration:15s;"></div>
+
+<div class="star" style="left:80%;animation-duration:9s;"></div>
+
+
+</div>
+
+
+
+
+
+<header>
+
+
+<div class="logo">
+
+Journey <span>Of My Life</span>
+
+</div>
+
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Space</a>
+
+<a href="#">Missions</a>
+
+<a href="#">Future</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="hero">
+
+
+<div class="hero-box">
+
+
+<div class="planet"></div>
+
+
+
+<h1>
+
+The Future Of Space Exploration:
+
+<br>
+
+<span>
+
+India's Journey Beyond Earth
+
+</span>
+
+</h1>
+
+
+
+<p>
+
+Exploring India's remarkable journey from launching satellites to reaching the Moon and Mars. Discover how technology, innovation, and human curiosity are shaping the future of space exploration.
+
+</p>
+
+
+
+<div class="tags">
+
+
+<div class="tag">
+ISRO
+</div>
+
+
+<div class="tag">
+Moon Missions
+</div>
+
+
+<div class="tag">
+Mars Exploration
+</div>
+
+
+<div class="tag">
+Future Space
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<main>
+<!-- =====================================
+PART 2 : INDIA SPACE EXPLORATION ARTICLE
+===================================== -->
+
+
+<section class="section">
+
+
+<h2>
+Introduction: Humanity's Dream Beyond Earth
+</h2>
+
+
+<p>
+
+Since the beginning of civilization, humans have looked at the night sky with curiosity and imagination. The stars, planets, and mysteries of the universe have always inspired people to explore beyond the limits of Earth. Space exploration represents humanity's greatest desire to discover the unknown and understand our place in the universe.
+
+</p>
+
+
+<p>
+
+For centuries, space remained a world of dreams and scientific imagination. However, modern technology transformed those dreams into reality. Rockets, satellites, artificial intelligence, and advanced engineering have allowed humans to travel beyond Earth's atmosphere and explore distant worlds.
+
+</p>
+
+
+<p>
+
+India has become an important part of this global space journey. From a modest beginning with limited resources to becoming one of the world's leading space nations, India's transformation is a story of dedication, innovation, and scientific excellence.
+
+</p>
+
+
+<p>
+
+Today, India's space exploration programs are not only focused on scientific discoveries but also on improving life on Earth through communication, weather forecasting, navigation, disaster management, and environmental monitoring.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+India's Space Revolution
+</h2>
+
+
+<p>
+
+India's journey into space began with a simple vision: using space technology for national development. In the early years, Indian scientists worked with limited resources but had extraordinary determination to build a strong foundation for space research.
+
+</p>
+
+
+<p>
+
+The establishment of India's space program created opportunities for scientific research, satellite development, and advanced rocket technology. Over the decades, India developed its own launch vehicles, communication satellites, and Earth observation systems.
+
+</p>
+
+
+<p>
+
+What makes India's space journey unique is its focus on innovation with efficiency. Indian scientists have achieved remarkable missions while maintaining cost-effective approaches, gaining worldwide recognition for their engineering capabilities.
+
+</p>
+
+
+<p>
+
+Today, India's space sector represents a combination of scientific research, technological advancement, and national ambition. The country continues to explore new possibilities, from lunar missions to human spaceflight and deep-space exploration.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+ISRO: The Power Behind India's Space Dreams
+</h2>
+
+
+<p>
+
+The Indian Space Research Organisation, commonly known as ISRO, has played the central role in transforming India's space vision into reality. Through decades of research and innovation, ISRO has developed technologies that have placed India among the leading space agencies in the world.
+
+</p>
+
+
+<p>
+
+ISRO's success is built on the dedication of scientists, engineers, researchers, and thousands of professionals working together toward a common goal. Their achievements demonstrate how knowledge, teamwork, and determination can overcome technological challenges.
+
+</p>
+
+
+<p>
+
+From communication satellites that connect remote communities to navigation systems that support transportation and security, ISRO's contributions affect millions of lives every day.
+
+</p>
+
+
+<p>
+
+The organization continues to expand its capabilities through advanced rocket systems, planetary exploration, satellite technology, and future human space missions.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Chandrayaan: India's Journey To The Moon
+</h2>
+
+
+<p>
+
+The Moon has always been one of humanity's most fascinating destinations. India's Chandrayaan missions represent a major milestone in lunar exploration and demonstrate the country's growing expertise in space science.
+
+</p>
+
+
+<p>
+
+The Chandrayaan program was designed to study the Moon's surface, mineral composition, and scientific characteristics. These missions provided valuable information that contributed to global understanding of Earth's closest celestial neighbor.
+
+</p>
+
+
+<p>
+
+India achieved a historic moment through its successful lunar exploration efforts, proving that advanced space missions can be achieved through innovation, careful planning, and scientific dedication.
+
+</p>
+
+
+<p>
+
+The discovery and analysis of lunar resources have created new possibilities for future exploration. Scientists believe the Moon could become an important destination for research stations and future human activities in space.
+
+</p>
+
+
+<div class="quote">
+
+"Space exploration is not only about reaching distant worlds. It is about expanding human knowledge and creating possibilities for future generations."
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Mangalyaan: India's Mission To Mars
+</h2>
+
+
+<p>
+
+Exploring Mars has been one of humanity's greatest scientific ambitions. The red planet has attracted researchers because of its similarities with Earth and the possibility of understanding planetary evolution.
+
+</p>
+
+
+<p>
+
+India's Mars Orbiter Mission, popularly known as Mangalyaan, became a remarkable achievement in space exploration. It demonstrated India's ability to successfully send a spacecraft beyond Earth's orbit and operate it around another planet.
+
+</p>
+
+
+<p>
+
+The mission provided valuable scientific data about Mars and showed the world India's technological capabilities. It became an inspiration for scientists, students, and future generations interested in space research.
+
+</p>
+
+
+<p>
+
+Mangalyaan proved that determination and innovation can achieve extraordinary results, even when facing complex challenges of deep-space exploration.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+The Importance Of Space Technology On Earth
+</h2>
+
+
+<p>
+
+Space exploration is not only about discovering planets and galaxies. The technologies developed for space missions often improve life on Earth in unexpected ways.
+
+</p>
+
+
+<p>
+
+Satellites help monitor weather conditions, predict storms, support agriculture, improve communication networks, and assist during natural disasters. Space technology has become an essential part of modern society.
+
+</p>
+
+
+<p>
+
+Navigation systems, remote sensing technology, and satellite communication have transformed industries and connected people across the world.
+
+</p>
+
+
+<p>
+
+The knowledge gained from space exploration continues to create innovations that benefit humanity beyond the boundaries of our planet.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- END OF PART 2 -->
+<!-- =====================================
+PART 3 : FUTURE SPACE VISION & CONCLUSION
+===================================== -->
+
+
+<section class="section">
+
+
+<h2>
+Future Moon Missions: The Next Lunar Era
+</h2>
+
+
+<p>
+
+The Moon is expected to become one of the most important destinations for future space exploration. Scientists and space agencies around the world believe that lunar missions will help humanity prepare for deeper journeys into the solar system.
+
+</p>
+
+
+<p>
+
+Future lunar exploration will focus on scientific research, resource discovery, and the development of technologies needed for long-term human presence beyond Earth. The Moon could become a testing ground for advanced spacecraft, robotics, and life-support systems.
+
+</p>
+
+
+<p>
+
+India's future lunar ambitions represent a continuation of its commitment to space science. Advanced missions will focus on collecting more detailed information about the lunar surface and understanding its resources.
+
+</p>
+
+
+<p>
+
+The possibility of establishing research stations on the Moon could open a new chapter in human exploration and create a pathway toward Mars and beyond.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+India's Human Spaceflight Mission
+</h2>
+
+
+<p>
+
+For decades, humans have dreamed of traveling beyond Earth and exploring space personally. India's human spaceflight program represents a major step toward making this dream a reality.
+
+</p>
+
+
+<p>
+
+Human space missions require advanced technology, including powerful launch vehicles, astronaut training systems, life-support equipment, and spacecraft designed for human safety.
+
+</p>
+
+
+<p>
+
+A successful human space program will not only demonstrate technological capability but also inspire millions of young people to pursue careers in science, engineering, and research.
+
+</p>
+
+
+<p>
+
+Indian astronauts traveling beyond Earth would represent a historic achievement and mark a new era in India's relationship with space exploration.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Space Stations And Future Human Colonies
+</h2>
+
+
+<p>
+
+The future of space exploration may eventually move beyond short missions toward permanent human presence in space. Space stations could become research centers where scientists study biology, physics, and technology in microgravity environments.
+
+</p>
+
+
+<p>
+
+Future habitats on the Moon or Mars could help humanity understand how humans can survive and work away from Earth for extended periods.
+
+</p>
+
+
+<p>
+
+Building space colonies would require solutions for food production, energy generation, communication, transportation, and protection from extreme space conditions.
+
+</p>
+
+
+<p>
+
+Although such dreams appear futuristic today, continuous progress in science and engineering is bringing humanity closer to becoming a multi-planetary civilization.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Artificial Intelligence In Space Exploration
+</h2>
+
+
+<p>
+
+Artificial Intelligence is becoming one of the most powerful tools in modern space exploration. AI systems help spacecraft navigate, analyze scientific data, and make decisions in environments where human communication may take minutes or hours.
+
+</p>
+
+
+<p>
+
+Autonomous robots powered by artificial intelligence can explore dangerous environments, collect samples, and perform scientific experiments without direct human control.
+
+</p>
+
+
+<p>
+
+In future missions to Mars and distant planets, AI will play a critical role by helping astronauts, managing spacecraft systems, and discovering new scientific information.
+
+</p>
+
+
+<p>
+
+The combination of artificial intelligence and space technology will allow humans to explore deeper into the universe with greater efficiency and safety.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+The Role Of Private Space Companies
+</h2>
+
+
+<p>
+
+Space exploration is no longer limited to government organizations. Private companies around the world are entering the space industry and creating new possibilities through innovation and competition.
+
+</p>
+
+
+<p>
+
+Private space companies are developing reusable rockets, advanced satellites, space communication systems, and commercial space travel technologies.
+
+</p>
+
+
+<p>
+
+This new era of collaboration between governments and private industries is accelerating the development of space technology and reducing the cost of accessing space.
+
+</p>
+
+
+<p>
+
+India is also encouraging private participation in the space sector, creating opportunities for startups, researchers, and entrepreneurs to contribute to future missions.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Space Technology Improving Life On Earth
+</h2>
+
+
+<p>
+
+Many technologies developed for space exploration have transformed everyday life on Earth. Satellite communication, weather prediction, navigation systems, and remote sensing have become essential parts of modern society.
+
+</p>
+
+
+<p>
+
+Farmers use satellite information to improve agriculture, scientists monitor climate changes, and governments use space data for disaster management and environmental protection.
+
+</p>
+
+
+<p>
+
+The benefits of space exploration extend far beyond astronauts and spacecraft. They create solutions that improve safety, connectivity, and quality of life for billions of people.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Challenges Of Deep Space Exploration
+</h2>
+
+
+<p>
+
+Although humanity has achieved remarkable progress, deep-space exploration remains one of the greatest challenges in science. Long distances, extreme environments, radiation, and limited resources create complex problems.
+
+</p>
+
+
+<p>
+
+Future missions will require advanced propulsion systems, stronger spacecraft materials, artificial intelligence support, and international cooperation.
+
+</p>
+
+
+<p>
+
+Space exploration also requires significant investment and careful planning. Scientists must balance ambitious goals with safety, sustainability, and responsible use of resources.
+
+</p>
+
+
+<p>
+
+Every challenge, however, creates an opportunity for innovation and discovery.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+The Future Of Humans Beyond Earth
+</h2>
+
+
+<p>
+
+Humanity stands at the beginning of a new space age. The coming decades may bring discoveries and achievements that once existed only in science fiction.
+
+</p>
+
+
+<p>
+
+Future generations may witness humans living and working beyond Earth, exploring new planets, and building technologies that connect different worlds.
+
+</p>
+
+
+<p>
+
+India's journey in space represents courage, creativity, and the power of scientific vision. From launching satellites to exploring the Moon and Mars, India has shown that great achievements are possible through dedication and innovation.
+
+</p>
+
+
+<p>
+
+The universe still holds countless mysteries, and humanity's journey to discover them has only just begun.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<div class="quote">
+
+"The future of space exploration is not only about reaching new planets. It is about expanding human imagination, knowledge, and the possibilities of life itself."
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Final Conclusion
+</h2>
+
+
+<p>
+
+The future of space exploration represents humanity's greatest adventure. India's journey beyond Earth is a story of determination, innovation, and scientific excellence.
+
+</p>
+
+
+<p>
+
+Through missions to the Moon, Mars, and future destinations, India continues to inspire the world with its achievements in space technology.
+
+</p>
+
+
+<p>
+
+Space exploration teaches us that the boundaries of possibility are constantly expanding. Every mission, discovery, and invention brings humanity closer to understanding the universe and our place within it.
+
+</p>
+
+
+<p>
+
+The stars are no longer just distant lights in the sky. They represent opportunities, dreams, and the future waiting to be explored.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Author
+</h3>
+
+<p>
+Ameshwar Dewangan
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Channel
+</h3>
+
+<p>
+Journey Of My Life
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Category
+</h3>
+
+<p>
+Space Technology & Future Innovation
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+<footer>
+
+
+<h2>
+Journey Of My Life
+</h2>
+
+
+<p>
+Exploring Technology, Innovation And The Future
+</p>
+
+
+<p style="margin-top:20px;color:#38bdf8;font-size:22px;">
+
+Created By Ameshwar Dewangan
+
+</p>
+
+
+<p style="margin-top:30px;">
+
+© 2026 Journey Of My Life • All Rights Reserved
+
+</p>
+
+
+</footer>
+
+
+
+
+
+<script>
+
+
+const sections =
+document.querySelectorAll(".section");
+
+
+window.addEventListener("scroll",()=>{
+
+
+sections.forEach(section=>{
+
+
+let position =
+section.getBoundingClientRect().top;
+
+
+if(position < window.innerHeight - 100){
+
+section.classList.add("show");
+
+}
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
