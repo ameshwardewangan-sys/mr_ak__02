@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey of My Life | Master Strategy for Growth</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES & SYSTEM DESIGN --- */
+        :root {
+            --bg-color: #0d0f17;
+            --card-bg: rgba(22, 27, 46, 0.75);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary-accent: #00f2fe;
+            --secondary-accent: #4facfe;
+            --purple-accent: #7f00ff;
+            --text-main: #f0f4f8;
+            --text-muted: #94a3b8;
+            --font-main: 'Outfit', sans-serif;
+            --font-heading: 'Space Grotesk', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- BACKGROUND ANIMATION EFFECT --- */
+        .glow-sphere-1, .glow-sphere-2 {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.35;
+            animation: floatGlow 10s infinite alternate ease-in-out;
+        }
+
+        .glow-sphere-1 {
+            background: var(--purple-accent);
+            top: -100px;
+            left: -100px;
+        }
+
+        .glow-sphere-2 {
+            background: var(--primary-accent);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes floatGlow {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 80px) scale(1.15); }
+        }
+
+        /* --- CONTAINER & LAYOUT --- */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            padding: 50px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- HEADER & METADATA --- */
+        .channel-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-accent), var(--purple-accent));
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        h1.article-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            line-height: 1.25;
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-accent), var(--purple-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+        }
+
+        .author-info h4 {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .author-info p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- ARTICLE CONTENT STYLING --- */
+        .content h2 {
+            font-family: var(--font-heading);
+            color: #fff;
+            font-size: 1.75rem;
+            margin: 40px 0 20px 0;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15%;
+            height: 70%;
+            width: 4px;
+            background: var(--primary-accent);
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--primary-accent);
+        }
+
+        .content p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        /* Highlight Callout Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(127, 0, 255, 0.1), rgba(0, 242, 254, 0.1));
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 30px 0;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-accent);
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        /* Custom List */
+        .custom-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        .custom-list li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-accent);
+        }
+
+        /* --- FOOTER SECTION --- */
+        .article-footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .subscribe-btn {
+            background: linear-gradient(135deg, var(--secondary-accent), var(--purple-accent));
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(127, 0, 255, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .subscribe-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 242, 254, 0.5);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .article-card { padding: 30px 20px; }
+            h1.article-title { font-size: 2rem; }
+            .content h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Background Lights -->
+    <div class="glow-sphere-1"></div>
+    <div class="glow-sphere-2"></div>
+
+    <div class="container">
+        <article class="article-card">
+            
+            <!-- Channel Tag -->
+            <span class="channel-badge">Journey of My Life</span>
+
+            <!-- Main Title -->
+            <h1 class="article-title">The Blueprint of Modern Success: Mastering Discipline & Digital Mindset</h1>
+
+            <!-- Author Metadata -->
+            <div class="author-meta">
+                <div class="author-avatar">AD</div>
+                <div class="author-info">
+                    <h4>Ameshwar Dewangan</h4>
+                    <p>Published in Personal Growth & System Design • 5 min read</p>
+                </div>
+            </div>
+
+            <!-- Main Article Content -->
+            <div class="content">
+                <p>In a world driven by endless noise, notifications, and rapid technological shifts, true success is no longer defined just by hard work—it is defined by focus, self-mastery, and continuous execution. The journey to building something meaningful starts from within.</p>
+
+                <h2>1. The Art of Intentional Living</h2>
+                <p>Most people drift through life responding to external circumstances rather than designing their own path. Intentional living means making deliberate choices every single day that align with your long-term vision. It requires cutting out unnecessary distractions and focusing only on high-impact actions.</p>
+
+                <!-- Interactive Callout Box -->
+                <div class="highlight-box">
+                    <h3>💡 Core Principle</h3>
+                    <p>"Consistency beats intensity every single time. Small, uninterrupted daily improvements yield massive compound growth over a long horizon."</p>
+                </div>
+
+                <h2>2. Building a Resilient Mindset</h2>
+                <p>Challenges are not roadblocks; they are the exact blueprint for growth. When you embrace difficult tasks, your brain adapts, and your capacity to handle higher stress increases. Developing mental toughness involves three main pillars:</p>
+
+                <ul class="custom-list">
+                    <li><strong>Emotional Control:</strong> Responding calmly to failure rather than reacting impulsively.</li>
+                    <li><strong>Continuous Skill Acquisition:</strong> Treating every setback as a lesson to acquire new capabilities.</li>
+                    <li><strong>Deep Work Protocol:</strong> Blocking out uninterrupted blocks of time to produce work of real value.</li>
+                </ul>
+
+                <h2>3. Execution Over Strategy</h2>
+                <p>An average strategy with extraordinary execution will always outperform a brilliant strategy with zero action. Stop overthinking the perfect start. The best time to build, create, and innovate was yesterday; the second best time is right now.</p>
+
+                <p>Every step you take on this road builds your unique story. Wear your vision proud, stay disciplined, and let your work speak for itself.</p>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="article-footer">
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Enjoyed this article? Follow the journey for more insights.</p>
+                <a href="#" class="subscribe-btn">Explore Journey of My Life</a>
+            </div>
+
+        </article>
+    </div>
+
+</body>
+</html>
