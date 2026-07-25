@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Architecture of AI | Journey of My Life</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-color: #58a6ff;
+            --purple-accent: #bc8cff;
+            --text-color: #c9d1d9;
+            --heading-color: #ffffff;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Hero Header with Animated Gradient background */
+        header {
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(-45deg, #0d1117, #1f242d, #0d253f, #161b22);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--accent-color), var(--purple-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta-info {
+            font-size: 1rem;
+            color: #8b949e;
+        }
+
+        .meta-info span {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Container & Grid layout */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Content Sections */
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Interactive Particle Neural Network Animation Canvas */
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #05080c;
+            border-radius: 8px;
+            margin: 25px 0;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Code Block Styling */
+        pre {
+            background-color: #0d1117;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            font-family: 'Courier New', Courier, monospace;
+            color: #e6edf3;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>The Architecture of Artificial Intelligence</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 10px; color: var(--text-color);">From Basic Neural Networks to Advanced Generative Models</p>
+        <div class="meta-info">
+            Channel: <span>Journey of My Life</span> | Author: <span>Ameshwar Dewangan</span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        
+        <!-- Interactive Visual Canvas Node Animation -->
+        <div class="canvas-container">
+            <canvas id="neuralCanvas"></canvas>
+        </div>
+
+        <!-- Section 1 -->
+        <section>
+            <h2>1. Executive Summary & Introduction</h2>
+            <p>Artificial Intelligence (AI) has transitioned from an academic discipline into the foundational backbone of modern technological infrastructure. At its core, modern AI relies on computational abstractions inspired by biological neural systems. Understanding this architecture is crucial for engineers, researchers, and innovators driving the next era of computing.</p>
+            <p>This comprehensive research article explores how simple mathematical operations scale into complex generative systems capable of reasoning, creative synthesis, and complex decision-making.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+            <h2>2. Fundamentals of Neural Networks</h2>
+            <p>The fundamental unit of deep learning is the Artificial Neuron (Perceptron). It receives input vectors, multiplies them by learned weight parameters, adds a bias term, and passes the result through a non-linear activation function.</p>
+            
+            <p>Mathematically, this process is defined as:</p>
+            <pre><code>Output = Activation_Function( Sum(Input * Weight) + Bias )</code></pre>
+
+            <p>Key architectural components include:</p>
+            <ul>
+                <li><strong>Input Layer:</strong> Raw data representations (e.g., pixel matrices, tokenized text).</li>
+                <li><strong>Hidden Layers:</strong> Deep representations that capture abstract feature hierarchies.</li>
+                <li><strong>Activation Functions:</strong> ReLU, GelU, and Softmax functions introducing non-linearity to capture complex functional mappings.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+            <h2>3. Evolution Towards Generative AI & Transformers</h2>
+            <p>Traditional architectures like Recurrent Neural Networks (RNNs) struggled with long-range sequential dependencies. The breakthrough came with the introduction of the <strong>Transformer Architecture</strong> using the <em>Self-Attention Mechanism</em>.</p>
+            <p>Self-attention allows models to process sequence data simultaneously rather than sequentially, quantifying the relationships between distant elements instantly.</p>
+            
+            <blockquote style="border-left: 3px solid var(--accent-color); padding-left: 15px; color: #8b949e; font-style: italic; margin: 20px 0;">
+                "Attention is all you need—enabling parallelized computations and scalable deep learning architectures across multimodal applications."
+            </blockquote>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+            <h2>4. Mathematical Implementation Sample</h2>
+            <p>Below is a clean vector transformation implementation concept written in Python representing a core Feed-Forward layer:</p>
+            <pre><code>import numpy as np
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+class SimpleNeuron:
+    def __init__(self, weights, bias):
+        self.weights = np.array(weights)
+        self.bias = bias
+
+    def feedforward(self, inputs):
+        # Calculate dot product of inputs and weights, add bias
+        total = np.dot(self.weights, inputs) + self.bias
+        return sigmoid(total)
+
+# Example Instantiation
+weights = np.array([0.5, -0.6])
+bias = 0.1
+neuron = SimpleNeuron(weights, bias)
+print("Neuron Activation Output:", neuron.feedforward(np.array([2, 3])))
+</code></pre>
+        </section>
+
+        <!-- Section 5 -->
+        <section>
+            <h2>5. Future Horizons: Autonomic AI & Beyond</h2>
+            <p>The future of AI architecture moves beyond static prediction towards dynamic, multi-agent systems capable of autonomous execution, long-term memory retrieval, and edge computing adaptation.</p>
+            <p>As computational efficiency improves, smaller, specialized models will work synchronously to orchestrate complex industrial and creative workflows seamlessly.</p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Journey of My Life</strong>. Authored by <strong>Ameshwar Dewangan</strong>.</p>
+        <p>Published for GitHub Open Source Knowledge Sharing.</p>
+    </footer>
+
+    <!-- Interactive Canvas Animation JavaScript -->
+    <script>
+        const canvas = document.getElementById('neuralCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let particles = [];
+        const numParticles = 45;
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        }
+        
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 1.2;
+                this.vy = (Math.random() - 0.5) * 1.2;
+                this.radius = Math.random() * 2 + 1.5;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#58a6ff';
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 110) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(88, 166, 255, ${1 - distance / 110})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
