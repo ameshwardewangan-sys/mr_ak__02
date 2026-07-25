@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dopamine Economy | Journey of My Life</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           1. CSS VARIABLES & RESET
+           ========================================== */
+        :root {
+            --bg-main: #0a0c10;
+            --bg-card: rgba(22, 27, 34, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-glow: #7928ca;
+            --accent-cyan: #00dfd8;
+            --accent-pink: #ff0080;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(121, 40, 202, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 223, 216, 0.15) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* ==========================================
+           2. TYPOGRAPHY & UTILITIES
+           ========================================== */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            letter-spacing: -0.02em;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ==========================================
+           3. HEADER & HERO SECTION
+           ========================================== */
+        header {
+            padding: 40px 0 20px;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 12, 16, 0.8);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 30px;
+        }
+
+        .author-badge {
+            color: var(--text-primary);
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent-pink);
+        }
+
+        /* ==========================================
+           4. ARTICLE CONTENT & CARDS
+           ========================================== */
+        article {
+            padding: 60px 0;
+        }
+
+        .intro-lead {
+            font-size: 1.25rem;
+            color: #c9d1d9;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 36px;
+            margin: 40px 0;
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 223, 216, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #b1bac4;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin: 20px 0 20px 20px;
+            color: #b1bac4;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* Highlight Box */
+        .quote-box {
+            border-left: 4px solid var(--accent-cyan);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+
+        /* ==========================================
+           5. ANIMATIONS
+           ========================================== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==========================================
+           6. FOOTER
+           ========================================== */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            margin-top: 60px;
+        }
+
+        .footer-brand {
+            font-family: var(--font-heading);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container nav-content">
+            <div class="brand">Journey Of My Life</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">Deep Research Article</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="tag">Gen Z & Modern Psychology</span>
+            <h1>The Dopamine Economy: <br><span class="gradient-text">How Gen Z Can Reclaim Focus</span></h1>
+            
+            <div class="meta-info">
+                <span>By <strong class="author-badge">Ameshwar Dewangan</strong></span>
+                <span>•</span>
+                <span>8 Min Read</span>
+                <span>•</span>
+                <span>Research Paper</span>
+            </div>
+        </section>
+
+        <!-- Article Body -->
+        <article>
+            <p class="intro-lead">
+                We live in an age where human attention has become the most valuable currency on earth. Modern technology platforms aren't just selling products; they are engineering behavioral loops designed to capture every second of our cognitive bandwidth.
+            </p>
+
+            <div class="glass-card">
+                <h2>1. The Science of the "Infinite Scroll"</h2>
+                <p>
+                    Every short-form video, notification badge, and algorithmically curated feed operates on a psychological system called <strong>Variable Ratio Reinforcement</strong>. Originally used in casino slot machines, this mechanism delivers rewards at unpredictable intervals.
+                </p>
+                <div class="quote-box">
+                    "When your brain cannot predict when it will receive the next hit of novel information, dopamine spikes exponentially higher than when the reward is predictable."
+                </div>
+                <p>
+                    For the younger generation, this constant state of hyper-stimulation shifts baseline dopamine levels. Standard daily tasks—like reading a dense book, writing code, or deeply mastering a technical skill—start feeling unnaturally boring and unrewarding.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h2>2. Deep Work as the Ultimate Competitive Advantage</h2>
+                <p>
+                    As short-form content erodes collective attention spans, the ability to concentrate deeply on complex tasks for extended periods becomes extremely rare. Computer scientist Cal Newport terms this <em>"Deep Work."</em>
+                </p>
+                <p>
+                    In the current economic paradigm, individuals who can control their attention hold a massive edge. They learn complex systems faster, produce higher-quality output, and build valuable projects while others remain perpetually distracted.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h2>3. Strategic Blueprint: Reclaiming Cognitive Control</h2>
+                <p>
+                    Breaking free from hyper-stimulation does not mean abandoning technology altogether. Instead, it requires transitioning from a passive consumer to an intentional operator:
+                </p>
+                <ul>
+                    <li><strong>Friction Engineering:</strong> Place intent barriers between you and quick-dopamine triggers (e.g., app timers, grayscale mode, removing social apps from the home screen).</li>
+                    <li><strong>Dopamine Fasting Protocol:</strong> Schedule intentional periods of low stimulation—like long walks without audio devices—to let baseline neural activity reset.</li>
+                    <li><strong>Monotasking Workblocks:</strong> Execute critical daily goals in uninterrupted, focused blocks (e.g., 90 minutes of high-intensity focus followed by complete rest).</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <h2>Conclusion: Moving Forward</h2>
+                <p>
+                    Focus is not an inherent trait you are simply born with; it is an active muscle that gets stronger with practice. By recognizing the mechanics of the digital dopamine economy, you can take control of your attention span and build meaningful, high-impact projects.
+                </p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">JOURNEY OF MY LIFE</div>
+            <p>Authored by <strong>Ameshwar Dewangan</strong> • Published on GitHub</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-secondary);">Designed with Dark Glassmorphism Aesthetics & Smooth CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>
