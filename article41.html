@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey of My Life | Research & Insights Hub</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           1. CORE VARIABLES & DARK MODE DESIGN SYSTEM
+           ========================================== */
+        :root {
+            --bg-dark: #07090e;
+            --bg-card: rgba(18, 22, 31, 0.65);
+            --bg-card-hover: rgba(26, 32, 46, 0.85);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-active: #00f2fe;
+            --text-main: #f0f6fc;
+            --text-sub: #8b949e;
+            --cyan: #00f2fe;
+            --purple: #7928ca;
+            --pink: #ff0070;
+            --green: #00ff87;
+            --font-head: 'Space Grotesk', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(121, 40, 202, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 0, 112, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Reading Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan), var(--pink));
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ==========================================
+           2. HEADER & BRANDING
+           ========================================== */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            background: rgba(7, 9, 14, 0.8);
+        }
+
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-badge {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: rgba(0, 242, 254, 0.1);
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+        }
+
+        .author-tag {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .author-tag span {
+            color: var(--text-main);
+            font-weight: 600;
+            border-bottom: 2px solid var(--pink);
+        }
+
+        /* ==========================================
+           3. HERO & SEARCH / FILTERS
+           ========================================== */
+        .hero {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
+            font-family: var(--font-head);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--text-sub);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Filter Pills */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-sub);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            color: var(--text-main);
+            border-color: var(--cyan);
+            background: rgba(0, 242, 254, 0.1);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+        }
+
+        /* ==========================================
+           4. ARTICLES GRID & 3D CARDS
+           ========================================== */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: 0.5s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--border-active);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            background: var(--bg-card-hover);
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+
+        .card p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+            margin-bottom: 24px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .read-btn {
+            color: var(--pink);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+        }
+
+        .card:hover .read-btn {
+            gap: 10px;
+        }
+
+        /* ==========================================
+           5. MODAL SYSTEM FOR READING ARTICLES
+           ========================================== */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-body {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            animation: modalUp 0.4s ease;
+        }
+
+        @keyframes modalUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: var(--pink);
+        }
+
+        .modal-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .modal-content-text h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            margin: 25px 0 15px;
+            color: var(--cyan);
+        }
+
+        .modal-content-text p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #c9d1d9;
+        }
+
+        .modal-content-text ul {
+            margin: 15px 0 20px 25px;
+            color: #b1bac4;
+        }
+
+        .modal-content-text li {
+            margin-bottom: 10px;
+        }
+
+        .takeaway-box {
+            background: rgba(0, 242, 254, 0.05);
+            border-left: 4px solid var(--cyan);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0;
+        }
+
+        /* ==========================================
+           6. FOOTER
+           ========================================== */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+            text-align: center;
+            background: rgba(5, 7, 10, 0.9);
+        }
+
+        .footer-brand {
+            font-family: var(--font-head);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .articles-grid { grid-template-columns: 1fr; }
+            .modal-body { padding: 24px; }
+            .hero { padding: 50px 0 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="progress-bar"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrap">
+            <div class="brand-logo">
+                JOURNEY OF MY LIFE <span class="brand-badge">RESEARCH HUB</span>
+            </div>
+            <div class="author-tag">
+                Author: <span>Ameshwar Dewangan</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Future Perspectives & <br><span class="gradient-text">Youth Evolution Research</span></h1>
+            <p>A curated collection of 10 deeply researched, high-impact articles covering technology, mindsets, economy, and performance for the new generation.</p>
+
+            <!-- Topic Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterCategory('all')">All Research</button>
+                <button class="filter-btn" onclick="filterCategory('tech')">Tech & AI</button>
+                <button class="filter-btn" onclick="filterCategory('mindset')">Mindset & Focus</button>
+                <button class="filter-btn" onclick="filterCategory('finance')">Future Economy</button>
+            </div>
+        </section>
+
+        <!-- Articles Dynamic Grid -->
+        <section class="articles-grid" id="articles-grid">
+            <!-- Articles will be populated via JavaScript -->
+        </section>
+
+    </main>
+
+    <!-- Interactive Reading Modal -->
+    <div class="modal" id="article-modal">
+        <div class="modal-body">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <span class="card-category" id="modal-category">CATEGORY</span>
+                <h1 id="modal-title" style="font-family: var(--font-head); font-size: 2rem; margin-top: 10px;">Article Title</h1>
+                <p style="color: var(--text-sub); font-size: 0.9rem; margin-top: 8px;">By <strong>Ameshwar Dewangan</strong> • <span id="modal-readtime">5 min read</span></p>
+            </div>
+            <div class="modal-content-text" id="modal-content">
+                <!-- Content inserted dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand gradient-text">JOURNEY OF MY LIFE</div>
+            <p style="color: var(--text-sub); font-size: 0.95rem;">Research & Designed by <strong>Ameshwar Dewangan</strong></p>
+            <p style="color: rgba(255,255,255,0.3); font-size: 0.8rem; margin-top: 15px;">Hosted on GitHub Pages • Built with Modern Interactive Aesthetics</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // 10 DEEP RESEARCHED ARTICLES DATA
+        const articlesData = [
+            {
+                id: 1,
+                category: "mindset",
+                title: "1. The Dopamine Economy & Deep Focus",
+                desc: "How short-form media rewires attention spans and how Gen-Z can rebuild intense cognitive focus.",
+                readTime: "7 Min Read",
+                content: `
+                    <h2>The Crisis of Fragmented Attention</h2>
+                    <p>Modern social platforms utilize <em>Variable Ratio Reinforcement</em>—the same psychological loop used in slot machines—to capture human focus. For youth, this elevates baseline dopamine, making hard tasks feel unnaturally dry.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Attention is the ultimate currency. Mastering 90-minute uninterrupted work blocks (Deep Work) gives you a 10x output advantage over peers.
+                    </div>
+                    <h2>Actionable Strategy</h2>
+                    <ul>
+                        <li><strong>Friction Engineering:</strong> App locks and grayscale screen modes.</li>
+                        <li><strong>Dopamine Fasting:</strong> Spend 30 minutes daily without digital audio/video inputs.</li>
+                        <li><strong>Monotasking Protocol:</strong> Focus exclusively on one complex skill at a time.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 2,
+                category: "tech",
+                title: "2. The AI Co-Pilot Era: Adapt or Automate",
+                desc: "Why artificial intelligence won't replace young professionals, but humans using AI will.",
+                readTime: "8 Min Read",
+                content: `
+                    <h2>Shifting from Creator to Director</h2>
+                    <p>AI models are democratizing technical skills. Coding, graphic design, and writing are moving from manual execution to prompt engineering and curation.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Learn how to leverage Large Language Models (LLMs) and automation pipelines to multiply your individual productivity.
+                    </div>
+                    <h2>Key Competencies for 2026+</h2>
+                    <ul>
+                        <li><strong>System Design:</strong> Understanding how tools connect via APIs.</li>
+                        <li><strong>Critical Curation:</strong> Spotting hallucinations and refining raw AI outputs.</li>
+                        <li><strong>Problem Framing:</strong> Asking precise questions to solve complex problems.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 3,
+                category: "finance",
+                title: "3. Creator Economy & Personal Branding",
+                desc: "Building digital leverage in an era where trust is tied to individual identity, not corporations.",
+                readTime: "6 Min Read",
+                content: `
+                    <h2>Your Identity is Your Digital Asset</h2>
+                    <p>Traditional resumes are losing relevance compared to public proof-of-work. Gen-Z creators building in public gain immediate global access to opportunities.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Documenting your learning journey (like 'Journey of My Life') builds an audience and authority faster than secret perfectionism.
+                    </div>
+                    <h2>Monetization & Growth Loop</h2>
+                    <ul>
+                        <li>Build a personal website/GitHub hub as your central anchor.</li>
+                        <li>Share high-value research and case studies consistently.</li>
+                        <li>Own your distribution via newsletters or open-source repositories.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 4,
+                category: "mindset",
+                title: "4. Micro-Habits & Compound Growth",
+                desc: "The neuroscience of small daily improvements and avoiding modern youth burnout.",
+                readTime: "5 Min Read",
+                content: `
+                    <h2>The 1% Better Daily Rule</h2>
+                    <p>Massive results rarely come from sudden extreme shifts. They stem from small daily micro-habits compounding silently over years.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Identity-based habits (e.g., "I am a builder") are far more resilient than goal-based habits ("I want to build 1 project").
+                    </div>
+                    <h2>Daily Execution Stack</h2>
+                    <ul>
+                        <li>Read 10 pages of high-quality research daily.</li>
+                        <li>Code/Design/Write for at least 45 focused minutes.</li>
+                        <li>Track progress visually in a journal or digital tracker.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 5,
+                category: "finance",
+                title: "5. Financial Literacy for Gen-Z",
+                desc: "Navigating high inflation, micro-investing, asset building, and digital wealth generation.",
+                readTime: "9 Min Read",
+                content: `
+                    <h2>De-coding Modern Wealth</h2>
+                    <p>Saving money in traditional low-yield accounts loses purchasing power over time. Understanding asset allocation, equities, and digital leverage is crucial early in life.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Focus 80% of energy on increasing active income/skills, and 20% on automated index investing.
+                    </div>
+                    <h2>Pillars of Early Financial Independence</h2>
+                    <ul>
+                        <li>Avoid high-interest consumer debt or lifestyle inflation.</li>
+                        <li>Automate monthly investments into low-cost index funds.</li>
+                        <li>Reinvest profits back into learning high-value digital skills.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 6,
+                category: "tech",
+                title: "6. Cyber Physical Systems & Web3 Realities",
+                desc: "Moving beyond hype: How decentralized protocols and edge computing reshape security.",
+                readTime: "7 Min Read",
+                content: `
+                    <h2>The Evolution of Digital Ownership</h2>
+                    <p>Data privacy and digital ownership are paramount. Understanding zero-knowledge proofs, decentralized identity, and cloud security forms the next web foundation.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> The future web prioritizes user ownership, cryptographic security, and seamless edge computing.
+                    </div>
+                    <h2>Core Tech Skills to Explore</h2>
+                    <ul>
+                        <li>Basics of Cryptography and Data Encryption.</li>
+                        <li>Decentralized storage solutions like IPFS.</li>
+                        <li>API Security and Modern Authorization Standards.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 7,
+                category: "mindset",
+                title: "7. Mental Resilience & Digital Stoicism",
+                desc: "Navigating information overload, online comparison, and emotional stability.",
+                readTime: "6 Min Read",
+                content: `
+                    <h2>Filtering the Noise</h2>
+                    <p>In a world of constant updates, high anxiety often stems from consuming things outside your direct circle of influence.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Apply Stoic philosophy: Divide inputs into what you can control (your focus, habits, reaction) and what you cannot.
+                    </div>
+                    <h2>Digital Detox Blueprint</h2>
+                    <ul>
+                        <li>Curate your feed ruthlessly—unfollow outrage-driven channels.</li>
+                        <li>Implement a strict "No Screen" rule for the first 30 minutes of your morning.</li>
+                        <li>Engage in real-world physical exercise to balance screen time.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 8,
+                category: "tech",
+                title: "8. The Rise of Solopreneurship & Micro-SaaS",
+                desc: "How single-person tech startups are generating massive revenue using modern tooling.",
+                readTime: "8 Min Read",
+                content: `
+                    <h2>One-Person Unicorns</h2>
+                    <p>With no-code tools, cloud infrastructure, and AI APIs, a single skilled developer or supervisor can build and run products that used to require entire teams.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Identify niche operational problems, build targeted software/workflow solutions, and automate distribution.
+                    </div>
+                    <h2>Building a Micro-SaaS</h2>
+                    <ul>
+                        <li>Find specific repetitive problems in local or online businesses.</li>
+                        <li>Build simple, fast web tools solving that precise issue.</li>
+                        <li>Automate onboarding and customer support.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 9,
+                category: "finance",
+                title: "9. Remote Work & Global Freelancing",
+                desc: "Unlocking global income opportunities while living anywhere using modern skill stacks.",
+                readTime: "7 Min Read",
+                content: `
+                    <h2>Arbitrage of Location & Income</h2>
+                    <p>Working remotely allows individuals to earn in stronger global currencies while controlling their time and personal freedom.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Position yourself as a specialist rather than a generalist to command higher rates globally.
+                    </div>
+                    <h2>Remote Success Factors</h2>
+                    <ul>
+                        <li>Master asynchronous communication (written documentation).</li>
+                        <li>Maintain clear portfolio repositories on GitHub/Behance.</li>
+                        <li>Deliver reliably before deadline timelines.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 10,
+                category: "mindset",
+                title: "10. Lifelong Learning & Ultra-Learning",
+                desc: "How to rapidly master complex hard skills in short, intense learning sprints.",
+                readTime: "8 Min Read",
+                content: `
+                    <h2>The Ultra-Learning Framework</h2>
+                    <p>The ability to acquire hard skills quickly is the ultimate meta-skill. By breaking subjects down into intense 30-day sprints, you outpace traditional education.</p>
+                    <div class="takeaway-box">
+                        <strong>Core Research Takeaway:</strong> Learn by active doing and building real projects, rather than passive tutorial consumption.
+                    </div>
+                    <h2>Sprint Steps</h2>
+                    <ul>
+                        <li><strong>Deconstruct:</strong> Break the skill into core components.</li>
+                        <li><strong>Directness:</strong> Build real projects from day 1.</li>
+                        <li><strong>Feedback Loop:</strong> Get instant error feedback and refine.</li>
+                    </ul>
+                `
+            }
+        ];
+
+        // 2. RENDER ARTICLES TO GRID
+        function renderArticles(data) {
+            const grid = document.getElementById('articles-grid');
+            grid.innerHTML = '';
+
+            data.forEach(article => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div>
+                        <span class="card-category">${article.category}</span>
+                        <h3>${article.title}</h3>
+                        <p>${article.desc}</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>${article.readTime}</span>
+                        <a href="#" class="read-btn" onclick="openModal(${article.id}); return false;">Read Research →</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // 3. FILTER FUNCTIONALITY
+        function filterCategory(cat) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if(cat === 'all') {
+                renderArticles(articlesData);
+            } else {
+                const filtered = articlesData.filter(item => item.category === cat);
+                renderArticles(filtered);
+            }
+        }
+
+        // 4. MODAL LOGIC
+        function openModal(id) {
+            const article = articlesData.find(item => item.id === id);
+            if(article) {
+                document.getElementById('modal-category').innerText = article.category;
+                document.getElementById('modal-title').innerText = article.title;
+                document.getElementById('modal-readtime').innerText = article.readTime;
+                document.getElementById('modal-content').innerHTML = article.content;
+                
+                const modal = document.getElementById('article-modal');
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('article-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close Modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('article-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // 5. READ PROGRESS BAR ANIMATION
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // INITIAL RENDER
+        renderArticles(articlesData);
+    </script>
+</body>
+</html>
